@@ -1,0 +1,49 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+
+    font-family: "Silkscreen", serif;
+    background-color: #27E8BA;
+}
+
+#wrap {
+    min-height: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+
+    background-color: white;
+}
+
+#main {
+    padding-bottom: 150px;
+}
+
+.section {
+    padding: 2em;
+    margin: 0px 50px;
+    background-color: white;
+}
+
+/* To be use for setting size for game thumbnails */
+.game_thumbnail {
+    height: 200px;
+}
+
+#footer {
+    height: 150px;
+
+    margin-top: -150px;
+    position: relative;
+
+    background-color: white;
+}
+
+#contact_info {
+    padding: 1em;
+}
