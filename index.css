@@ -30,6 +30,19 @@ header {
     background-color: white;
 }
 
+.games {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.game {
+    padding: 50px;
+    flex-grow: 1;
+    outline: solid #27E8BA;
+    max-width: 30em;
+}
+
 /* To be use for setting size for game thumbnails */
 .game_thumbnail {
     height: 200px;
@@ -41,7 +54,7 @@ header {
     margin-top: -150px;
     position: relative;
 
-    background-color: white;
+    color: white;
 }
 
 #contact_info {
