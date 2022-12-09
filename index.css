@@ -44,7 +44,7 @@ header {
 }
 
 /* To be use for setting size for game thumbnails */
-.game_thumbnail {
+img {
     height: 200px;
 }
 
