@@ -12,13 +12,23 @@
                 <br>
                 <div id="main">
                     <div class="section" id="about">
-                        <h2>About me</h2>
-                        <p>
-                            I am a senior currently studying computer science at the University of Michigan, currently expecting to graduate Spring 2023.
-                        </p>
-                        <p>
-                            Video games have been involved in my life since I was young, and I hope to get into the game development industry (or alternatively into web development).
-                        </p>
+                        <div class="sub-section1">
+                            <h2>About me</h2>
+                            <img src="images/Profile_Picture.JPG" alt="picture of Henry (Me!)" id="ID_pic">    
+                        </div>
+                        <div class="sub-section2">
+                            <p>
+                                <strong>Who am I?</strong>
+                                <br>
+                                I am a senior currently studying computer science at the University of Michigan - Ann Arbor, currently expecting to graduate Spring 2023.
+                                I am also a Unity Game Developer, with a focus on UI/UX. I am also a Web Developer, with experience with both frontend (HTML/CSS, JavaScript, React, Jinja) as well as backend(Flask, SQLite, Rest API).
+                                <br>
+                                <br>
+                                <strong>My goals</strong>
+                                <br>
+                                I am currently looking for full-time opportunities in the game industry, with a focus on UI/UX and game design roles. I am also looking for web and software developer roles.
+                            </p>
+                        </div>
                     </div>
                     <br>
                     <div class="section" id="projects">
@@ -29,12 +39,15 @@
                             <!-- Cavelit entry -->
                             <div class="game" id="game_3">
                                 <a href="https://henrlin24.itch.io/cavelit">
-                                    <img src="images/CavelitTitle.jpg" alt="Cavelit game thumbnail">
-                                    <p>Cavelit</p>
+                                    <img src="images/CavelitTitle.jpg" alt="Cavelit game thumbnail" class="game_thumbnail">
+                                    <h3>Cavelit</h3>
                                 </a>
-                                <details>
-                                    <summary>Description</summary>
+                                <div class="description">
                                     <p>
+                                        <strong>Technologies: </strong>C#, Unity, Github, Jira
+                                    </p>
+                                    <p>
+                                        <strong>Description: </strong>
                                         Cavelit is a 2D platformer game, developed by a 5 person team for EECS 494. It also includes freelance contributions for music, SFX, and voicing.
                                         You play as Bob, a miner who has be caught in a cave-in, and need to find a way out of the depths.
                                     </p>
@@ -43,19 +56,22 @@
                                         scene transitions, the title and ending screens, work on the UI (including the battery/health positioning to follow the player, implementing the dynamite counter, and the player life counter that is shown in the death sequence).
                                         I also contributed to level design in the form of initial ideas, general tweaks like darkness level and ambient player lighting, as well as pre-deliverable quality checks.
                                         The game trailer and development blogs were also put together by me, which are featured on <a href="https://henrlin24.itch.io/cavelit">the Cavelit itch.io page</a> and <a href="https://www.indiedb.com/members/eratos/blogs">IndieDB</a> & <a href="https://forums.tigsource.com/index.php?topic=73888.msg1453812#msg1453812">TIGForums</a> respectively.
-                                    </p>
-                                </details>
+                                    </p>    
+                                </div>
                             </div> <!-- entry -->
 
                             <!-- Gacha Slimes entry -->
                             <div class="game" id="game_2">
                                 <a href="https://henrlin24.itch.io/gacha-slimes">
-                                    <img src="images/GachaSlimes.png" alt="Gacha Slimes game thumbnail">
-                                    <p>Gacha Slimes</p>
+                                    <img src="images/GachaSlimes.png" alt="Gacha Slimes game thumbnail" class="game_thumbnail">
+                                    <h3>Gacha Slimes</h3>
                                 </a>
-                                <details>
-                                    <summary>Description</summary>
+                                <div class="description">
                                     <p>
+                                        <strong>Technologies: </strong>C#, Unity, Github, Jira
+                                    </p>
+                                    <p>
+                                        <strong>Description: </strong>
                                         Gacha Slimes is a 2D platformer, and is the second project I made for EECS 494. The game was created individually by me, but does make use of free visual and audio assets.
                                         The core idea behind the game behind the game is to create a platformer that has a core "gacha" mechanic that would change the way that players progress through the levels.
                                     </p>
@@ -66,18 +82,21 @@
                                         Core mechanics and game level design, as well as the corresponding playtest and feedback, were also major parts of my development process.
                                         Changes were kept track of using a Github repository, as well as Jira to keep track of tasks.
                                     </p>
-                                </details>
+                                </div>
                             </div> <!-- entry -->
 
                             <!-- Custom LOZ entry-->
                             <div class="game" id="game_1">
                                 <a href="https://henrlin24.itch.io/legend-of-zelda-dont-move">
-                                    <img src="images/LOZ_Custom.png" alt="Legend of Zelda Custom game thumbnail">
-                                    <p>Legend of Zelda NES remake</p>
+                                    <img src="images/LOZ_Custom.png" alt="Legend of Zelda Custom game thumbnail" class="game_thumbnail">
+                                    <h3>Legend of Zelda NES remake</h3>
                                 </a>
-                                <details>
-                                    <summary>Description</summary>
+                                <div class="description">
                                     <p>
+                                        <strong>Technologies: </strong>C#, Unity, Plastic SCM, Jira
+                                    </p>
+                                    <p>
+                                        <strong>Description: </strong>
                                         This is a Legend of Zelda clone, created with a partner as the first project in EECS 494.
                                         This involved remaking the first dungeon of the original NES game, including the enemies, traps, and weapons availiable at that point in the game.
                                         Additionally, we also implemented our own custom mechanic and level — a moving laser obstacle that only damages the player when they are moving, inspired by a similar mechanic featured in Undertale.
@@ -88,23 +107,26 @@
                                         Other core gameplay elements I worked include player health and UI, the implementation of god mode (cheat mode, allows for easier time testing), as well as contributing towards the custom mechanic and level design.
                                         I notably implemented the starting tutorial sequence of the custom level.
                                     </p>
-                                </details>
+                                </div>
                             </div> <!-- entry -->
 
                             <!-- Roll-a-Chicken entry-->
                             <div class="game" id="game_0">
                                 <a href="https://henrlin24.itch.io/roll-a-chicken">
-                                    <img src="images/Roll_a_Chicken.png" alt="Roll-a-Chicken game thumbnail">
-                                    <p>Roll-a-Chicken</p>
+                                    <img src="images/Roll_a_Chicken.png" alt="Roll-a-Chicken game thumbnail" class="game_thumbnail">
+                                    <h3>Roll-a-Chicken</h3>
                                 </a>
-                                <details>
-                                    <summary>Description</summary>
+                                <div class="description">
                                     <p>
+                                        <strong>Technologies: </strong>C#, Unity
+                                    </p>
+                                    <p>
+                                        <strong>Description: </strong>
                                         A simple Roll-a-Ball game created as part of setup for EECS 494.
                                         This included implementing a simple movement script, a jump mechanic that made use of raycasts to determine if the player was on ground (and hence could jump), as well as an updating UI score counter.
                                         The 3D models used in the game were from the Unity Asset Store as free assets.
                                     </p>
-                                </details>
+                                </div>
                             </div> <!-- entry -->
 
                         </div> <!-- games -->
