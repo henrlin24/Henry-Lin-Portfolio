@@ -65,7 +65,7 @@ img.game_thumbnail {
 }
 
 img#ID_pic {
-    height: 20em;
+    max-height: 20em;
 }
 
 #footer {
