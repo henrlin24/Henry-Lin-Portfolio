@@ -2,3 +2,18 @@
     padding: 1em;
     outline: solid #27E8BA;
 }
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+
+tr.final {
+    border: 1px solid black;
+}
+
+img {
+    max-width: 40%;
+}

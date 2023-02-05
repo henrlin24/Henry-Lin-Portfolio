@@ -24,8 +24,8 @@
                         <p>Below are (or will be) entries for my work for WolverineSoft Studio's Winter 2023 Project.</p>
 
                         <div class="entry">
-                            <h3>Week 1 (Jan 21 - Jan 27)</h3>
-                            <h3>Setup and onboarding tasks</h3>
+                            <h3>Week 1 (Jan 15 - Jan 21)</h3>
+                            <h4>Setup and onboarding tasks</h4>
                             <p>
                                 Setup included getting SourceTree set up and running as my Git client, as well as getting my Jira/Confluence/BitBucket account.
                                 As part of the programming team onboarding, we were to also implement either a console command or achievement.
@@ -33,11 +33,112 @@
                             </p>
                         </div>
                         <div class="entry">
-                            <h3>Week 2 & 3 (Jan 28 - Feb 5)</h3>
-                            <h3>Main HUD</h3>
-                            <p>
+                            <h3>Week 2 & 3 (Jan 22 - Feb 5)</h3>
+                            <div>
+                                <h4>Week 2 - Basic HUD:</h4>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Category</th>
+                                                <th>Time</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Meetings and logistics:</td>
+                                                <td>3 h</td>   
+                                            </tr>
+                                            <tr>
+                                                <td>Documentation, planning, and testing:</td>
+                                                <td>3 h</td>   
+                                            </tr>
+                                            <tr>
+                                                <td>Development:</td>
+                                                <td>8 h</td>   
+                                            </tr>
+                                            <tr class="final">
+                                                <td>Total</td>
+                                                <td>14 h</td>   
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
+                                <p>
+                                    For the second week, I started working on the main HUD, specifically on health bar modifications and a few general UI scripts.
+                                    There was a bit of initial time spent on looking through the UI design documentation, as well as looking through the existing codebase to see what I was working off of.
+                                    A placeholder health bar display object was already in place, to which I added threshold and corresponding color parameters to better indicate low player health.
+                                    I then created a general UI fade, lerp, and shake scripts. The lerp and shake scripts notably came about from testing different methods to produce the health shake effect desired by the design team.
+                                    I would also try to test out Mathf.PingPong(), but that turned out to not work as well as the Lerp implementation.
+                                    The final "shake" script utilzed Hooke's Law, the application of which I learned from EECS 494. For the shake script, I also created the corresponding Unity event and listener. 
+                                </p>
+                                <div>
+                                    <h5>Screenshots:</h5>
+                                    <p>Health fade and health thresholds</p>
+                                    <img src="images/WSoft/Week2&3/HealthFade.gif">
+                                    <img src="images/WSoft/Week2&3/HealthThresholds.gif">   
+                                </div>
                                 
-                            </p>
+                            </div>
+                            <div>
+                                <h4>Week 3 - HUD additions and fixes, Weapon UI:</h4>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Category</th>
+                                            <th>Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Meetings and logistics:</td>
+                                            <td>3 h</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Documentation, planning, and testing:</td>
+                                            <td>2 h 30 m</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Development:</td>
+                                            <td>6 h</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Bugfixing:</td>
+                                            <td>2 h</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td>13 h 30 m</td>   
+                                        </tr> 
+                                    </tbody>
+                                </table>
+                                <p>
+                                    For the third week, I updated and made additions to main HUD features from week 2, created a basic title scene, as well as implemented an initial weapon ui display.
+                                    To start, I updated a the lerp and fade scripts from week 2 to work as callback functions for future events.
+                                    I then updated the health bar display to work with the new shield system, as well create a shield ui display.
+                                    The shield ui display also included creating a Unity event and listener to update shield ui when it regenerates or decreases.
+                                    I then went about to creating a stamina bar, which was an UI element that was to be attached to the player object, and thus relative to the player's position on the screen.
+                                    This was done by making a UI canvas that was a child to the player object. 
+                                    I then worked on the title scene, of which most of the time was spent relearning how buttons and onclick functionality worked in Unity.
+                                    A main menu and placeholders for submenus (e.g. settings and credits) was created for this initial title screen.
+                                    Finally, I created the weapon ui display, which would turn out to be two sibling displays for melee and ranged weapons respectively.
+                                    Of note, my branch encountered a few issues during the weapon ui development, and led to me having to reset my scene a couple of times.
+                                    Much of my time was spent just redoing my work, as well as readjusting elements after merging in the master build to my branch for the final pull request.
+                                </p>
+                                <div>
+                                    <h5>Screenshots: </h5>
+                                    <p>Shield and stamina bars:</p>
+                                    <img src="images/WSoft/Week2&3/ShieldBar.gif">
+                                    <img src="images/WSoft/Week2&3/StaminaBar.gif">
+                                    <br>
+
+                                    <p>Title screen:</p>
+                                    <img src="images/WSoft/Week2&3/TitleScene.gif">
+                                    <img src="images/WSoft/Week2&3/TitleSceneAlt.gif">
+                                    <br>
+
+                                    <p>Weapon UI:</p>
+                                    <img src="images/WSoft/Week2&3/WeaponUI.gif">
+                                </div>            
                         </div>
                     </div>
 
