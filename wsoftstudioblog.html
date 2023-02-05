@@ -65,11 +65,16 @@
                                     </table>
                                 <p>
                                     For the second week, I started working on the main HUD, specifically on health bar modifications and a few general UI scripts.
-                                    There was a bit of initial time spent on looking through the UI design documentation, as well as looking through the existing codebase to see what I was working off of.
-                                    A placeholder health bar display object was already in place, to which I added threshold and corresponding color parameters to better indicate low player health.
-                                    I then created a general UI fade, lerp, and shake scripts. The lerp and shake scripts notably came about from testing different methods to produce the health shake effect desired by the design team.
-                                    I would also try to test out Mathf.PingPong(), but that turned out to not work as well as the Lerp implementation.
-                                    The final "shake" script utilzed Hooke's Law, the application of which I learned from EECS 494. For the shake script, I also created the corresponding Unity event and listener. 
+                                    I spent an hour or so looking through the UI design documentation, as well as looking through the existing codebase to see what I was working off of.
+                                    A placeholder health bar display object was already in place, to which I added threshold and corresponding color parameters to better indicate low player health in another hour.
+                                    <br>
+                                    I then created a general UI fade, lerp, and shake scripts.
+                                    Testing out different methods to create a shaking healthbar on hit would overall be a needless timesink in hindsight, as I spent around 3-4 hours testing out different methods.
+                                    The lerp and shake scripts were the end results of testing different methods to produce the health shake effect.
+                                    I would also try to test out Mathf.PingPong(), but that turned out to not work as well as the Lerp and shake implementation.
+                                    The final "shake" script utilzed Hooke's Law, the application of which I learned from EECS 494. For the shake script, I also created the corresponding Unity event and listener.
+                                    <br>
+                                    The UI fade ended up taking about an hour, and an overall much better utilization of time.
                                 </p>
                                 <div>
                                     <h5>Screenshots:</h5>
@@ -112,17 +117,26 @@
                                     </tbody>
                                 </table>
                                 <p>
-                                    For the third week, I updated and made additions to main HUD features from week 2, created a basic title scene, as well as implemented an initial weapon ui display.
-                                    To start, I updated a the lerp and fade scripts from week 2 to work as callback functions for future events.
-                                    I then updated the health bar display to work with the new shield system, as well create a shield ui display.
-                                    The shield ui display also included creating a Unity event and listener to update shield ui when it regenerates or decreases.
+                                    For the third week, I updated and made additions to main HUD features from week 2, created a basic title scene, as well as implemented an initial weapon UI display.
+                                    To start, I updated a the lerp and fade scripts from week 2 to work as callback functions for future events, taking about 30 minutes including consulting my programming lead.
+                                    <br>
+                                    I then updated the health bar display to work with the new shield system, as well create a shield UI display.
+                                    The shield UI display also included creating a Unity event and listener to update shield UI when it regenerates or decreases.
                                     I then went about to creating a stamina bar, which was an UI element that was to be attached to the player object, and thus relative to the player's position on the screen.
-                                    This was done by making a UI canvas that was a child to the player object. 
-                                    I then worked on the title scene, of which most of the time was spent relearning how buttons and onclick functionality worked in Unity.
+                                    This was done by making a UI canvas that was a child to the player object.
+                                    The shields and stamina would take about an hour each, for two hours total between the two.
+                                    <br>
+                                    I then worked on the title scene, of which most of the two hours developing was spent relearning how buttons and onclick functionality worked in Unity.
                                     A main menu and placeholders for submenus (e.g. settings and credits) was created for this initial title screen.
-                                    Finally, I created the weapon ui display, which would turn out to be two sibling displays for melee and ranged weapons respectively.
-                                    Of note, my branch encountered a few issues during the weapon ui development, and led to me having to reset my scene a couple of times.
-                                    Much of my time was spent just redoing my work, as well as readjusting elements after merging in the master build to my branch for the final pull request.
+                                    <br>
+                                    Finally, I created the weapon UI display, which would turn out to be two sibling displays for melee and ranged weapons respectively.
+                                    About 1.5 hours was spent looking into the design specifications and looking into how the weapon UI looked in Hyper Light Drift.
+                                    I then spent about 1.5 hours creating the initial melee weapon UI.
+                                    Another 1.5 hours was spent on refining some issues, such as display layer priority, as well as implementing a corresponding ranged weapon UI.
+                                    My build notably did encounter a few issues during the weapon UI development, and led to me having to reset my progress a few times.
+                                    The player would not be able to move during playtesting, and would not load in a default weapon to test the weapon UI with.
+                                    After consulting my programming lead and creating a new branch, I managed to get the weapon UI working again but it stil ate up aobut 2 hours here.
+                                    I then spent about 30 minutes readjusting the UI after merging in from the master to minimize bugs when merging, and made my final feature pull request for the sprint.
                                 </p>
                                 <div>
                                     <h5>Screenshots: </h5>
@@ -138,7 +152,8 @@
 
                                     <p>Weapon UI:</p>
                                     <img src="images/WSoft/Week2&3/WeaponUI.gif">
-                                </div>            
+                                </div>
+                                <h4>Total time: 27 h 30 m</h4>        
                         </div>
                     </div>
 
