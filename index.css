@@ -6,7 +6,7 @@ body {
     margin: 0;
 
     font-family: "Silkscreen", serif;
-    background-color: #27E8BA;
+    background-color: rgb(24, 101, 92);
 }
 
 #wrap {
@@ -56,7 +56,7 @@ header {
 
     padding: 50px;
     flex-grow: 1;
-    outline: solid #27E8BA;
+    outline: solid rgb(24, 101, 92);
 }
 
 /* To be use for setting size for game thumbnails */
