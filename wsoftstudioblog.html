@@ -164,7 +164,7 @@
                         <div class="entry">
                             <h3>Weeks 4 & 5 (Feb 5 - Feb 18)</h3>
                             <div>
-                                <h4>Week 4 - Bug Fixes:</h4>
+                                <h4>Week 4 - Sprint 1 QA:</h4>
                                     <table>
                                         <thead>
                                             <tr>
@@ -346,7 +346,7 @@
                                 
                             </div>
                             <div class="week">
-                                <h4>Week 7 - Bugfixing:</h4>
+                                <h4>Week 7 - Sprint 2 QA:</h4>
                                 <table>
                                     <thead>
                                         <tr>
@@ -357,27 +357,46 @@
                                     <tbody>
                                         <tr>
                                             <td>Meetings and logistics:</td>
-                                            <td>3 h</td>   
+                                            <td>2 h</td>   
                                         </tr>
                                         <tr>
                                             <td>Documentation, planning, and testing:</td>
-                                            <td>1 h</td>   
+                                            <td>30 m</td>   
                                         </tr>
                                         <tr>
                                             <td>Development:</td>
-                                            <td>8 h 30 m</td>   
+                                            <td>5 h</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Bugfixing:</td>
+                                            <td>3 h 30 m</td>   
                                         </tr>
                                         <tr>
                                             <td>Total</td>
-                                            <td>12 h 30 m</td>   
+                                            <td>11 h</td>   
                                         </tr> 
                                     </tbody>
                                 </table>
                                 <p>
+                                    This was the QA week for sprint 2, where I focused on improving existing features, such as the currency popup and enemy health bars.
+                                    Of note, the currency popup required some work as the initial implementation did not work as the Unity event invokation did not work correctly.
+                                    I would end up instead using an existing Eventbus event for callback for when there was a currecny gain event.
+                                    In addition, I also had to account for popup behavior for multiple currency gain events occuring concurrently (e.g. killing multiple enemies within a short time frame).
+                                    I ended up implementing a system where multiple instances that occured within a period of time would instead accumulate, and result in a single popup showing the accumulated gain.
+                                    The specific period of time was parameterized to allow for ease of testing of different values for designers.
+                                    <br>
+                                    <br>
+                                    My other big task for this week was to implement an "acquire" console command, which would allow for instant acquisition of the spear weapon, as well all the guns.
+                                    This was highly requested during the studio playtest session. There were some hiccups in testing this feature, mostly due to an issue in my testing scene as well as in missing player animations at the time.
+                                    <br>
+                                    <br>
+                                    The rest of the week's tasks consisted of mostly HUD and UI fixes, such as enemy health bars appearing below the level tilemap, the shop not stopping time when active, 
+                                    the player attacking when clicking to exit the shop, as well as a reported bug for attacks not having a SFX when just swinging at the air.
+                                    I would break down the enemy health bars into cells, similar to the player health bar, at the request of design.
                                 </p>
                                 <div>
                                     <h5>Screenshots: </h5>
-                                    <p>New weapon UI:</p>
+                                    <p>New weapon UI: </p>
                                     <img src="images/WSoft/Week4&5/WeaponUIOverhaul.png">
                                     <br>
                                 </div>
