@@ -156,6 +156,10 @@
                                     <p>Weapon UI:</p>
                                     <img src="images/WSoft/Week2&3/WeaponUI.gif">
                                 </div>
+
+                                <br>
+                                <hr>
+
                                 <h4>Total time: 27 h 30 m</h4>
                             </div>  
                         </div> <!-- Entry -->
@@ -273,6 +277,10 @@
                                     <img src="images/WSoft/Week4&5/InteractionUI.gif">
                                     <br>
                                 </div>
+
+                                <br>
+                                <hr>
+
                                 <h4>Total time: 24 h</h4>
                             </div>       
                         </div> <!-- Entry -->
@@ -380,7 +388,7 @@
                                 <p>
                                     This was the QA week for sprint 2, where I focused on improving existing features, such as the currency popup and enemy health bars.
                                     Of note, the currency popup required some work as the initial implementation did not work as the Unity event invokation did not work correctly.
-                                    I would end up instead using an existing Eventbus event for callback for when there was a currecny gain event.
+                                    I would end up instead using an existing Eventbus event for callback for when there was a currency gain event.
                                     In addition, I also had to account for popup behavior for multiple currency gain events occuring concurrently (e.g. killing multiple enemies within a short time frame).
                                     I ended up implementing a system where multiple instances that occured within a period of time would instead accumulate, and result in a single popup showing the accumulated gain.
                                     The specific period of time was parameterized to allow for ease of testing of different values for designers.
@@ -396,14 +404,27 @@
                                 </p>
                                 <div>
                                     <h5>Screenshots: </h5>
-                                    <p>New weapon UI: </p>
-                                    <img src="images/WSoft/Week4&5/WeaponUIOverhaul.png">
+                                    <p>Currency Popup Update w/ accumulation: </p>
+                                    <img src="images/WSoft/Week6&7&8/Week7/CurrencyPopupWithAccumulation.gif">
+                                    <br>
+
+                                    <p>Acquire Console Command :</p>
+                                    <img src="images/WSoft/Week6&7&8/Week7/AcquireConsoleCommandMelee.gif">
+                                    <img src="images/WSoft/Week6&7&8/Week7/AcquireConsoleCommandRanged.gif">
+                                    <br>
+
+                                    <p>Enemy Health Bar Update: </p>
+                                    <img src="images/WSoft/Week6&7&8/Week7/EnemyHealthBarCells.gif">
                                     <br>
                                 </div>
+
+                                <br>
+                                <hr>
+
                                 <h4>Total time: 24 h</h4>
                             </div>      
                             <div class="week">
-                                <h4>Week 8 - :</h4>
+                                <h4>Week 8 - Combat and Title HUD:</h4>
                                 <table>
                                     <thead>
                                         <tr>
@@ -418,27 +439,67 @@
                                         </tr>
                                         <tr>
                                             <td>Documentation, planning, and testing:</td>
-                                            <td>1 h</td>   
+                                            <td>30 m</td>   
                                         </tr>
                                         <tr>
                                             <td>Development:</td>
-                                            <td>8 h 30 m</td>   
+                                            <td>8 h</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Bugfixing:</td>
+                                            <td>30 m</td>   
                                         </tr>
                                         <tr>
                                             <td>Total</td>
-                                            <td>12 h 30 m</td>   
+                                            <td>12 h</td>   
                                         </tr> 
                                     </tbody>
                                 </table>
                                 <p>
+                                    This was the start of the last feature-add sprint, where I focused on three primary features/updates: player damage HUD, a final currency display overhaul, and confirmation menus for the Title scene.
+                                    <br>
+                                    <br>
+                                    For the damage HUD, I originally went about creating a transparent PNG image with a gradient border, where the designers could change the color and whatnot as needed.
+                                    However, insight from a fellow programming member (shoutout to Kevin) led me to instead use the Unity Post Processing packgage, where use of a Volume object to produce a vignette effect was able to achieve the same effect.
+                                    Benefits of using the Post Processing package, such as the ability to change the scale and intensity of the effect, as well as giving access to potential additional visual effects later on, 
+                                    were some of the reasons I went instead with the Unity package instead of the initial transparent PNG idea.
+                                    <br>
+                                    <br>
+                                    The currency popup UI saw another overhaul in the form of visuals, as well as in how multiple instances of currency gains were to be treated. 
+                                    A separate popup was to be generated for each currency gain instance, which required me to instantiate popup objects instead of using and modifying one popup, as I did in the initial implementation.
+                                    The main difference, however, was now I also had to account for visual behavior for multiple popups: new popups were to appear below previous ones, as well as move up in accordance to older popups expiring.
+                                    At first, I tried going about coding this feature from scratch (e.g. keeping popup references in a list/stack, and updating positions through lerps), but realized that Unity had a Vertical Layout feature.
+                                    There was a bit of tweaking involved in getting the popups to look correctly, as well as update existing popup positions when an older popup expired, but it was much easier than to code it from scratch.
+                                    It also provided existing parameters for designers to adjust.
+                                    <br>
+                                    <br>
+                                    Additional changes include a new modal menu to confirm selections on the Title screen, such as for the "New Game" and "Quit" options, 
+                                    as well as rolling back an erroneous weapon SFX change from the previous QA week.
+                                    I also attended a playtest session by Jordan Ajlouni, where notable suggestions and observations included: 
+                                    the Title screen was a bit confusing, HUD was to be disabled during cutscenes, effects to indicate hit on player, skip button for cutscene, keyprompt for interactables, and a permanent currency display.
+                                    Many of these issues would be addressed during the week, as well as in later development.
+                                    <br>
+                                    <br>
+                                    Of note, it was around this period that I started to consider ease of modification for designers and other non-programmers in the studio.
+                                    I've always noticed a few members consistently doing so, and after inquires from design on how to modify features that I previously modified, I started to parameterize more to make things a bit easier.
+                                    It also made the UI work a little more interesting as well (:p).
                                 </p>
                                 <div>
                                     <h5>Screenshots: </h5>
-                                    <p>New weapon UI:</p>
-                                    <img src="images/WSoft/Week4&5/WeaponUIOverhaul.png">
+                                    <p>Currency Popup Overhaul:</p>
+                                    <img src="images/WSoft/Week6&7&8/Week8/CurrencyPopupOverhaul.gif">
                                     <br>
+
+                                    <p>Player Hit Indicator:</p>
+                                    <img src="images/WSoft/Week6&7&8/Week8/PlayerHitIndicator.gif">
+                                    <br>
+                                    
                                 </div>
-                                <h4>Total time: 24 h</h4>
+
+                                <br>
+                                <hr>
+
+                                <h4>Total time: 34 h 30 m</h4>
                             </div>   
                         </div> <!-- Entry -->
                         
