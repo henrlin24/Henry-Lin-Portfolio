@@ -533,11 +533,11 @@
                                             </tr>
                                             <tr>
                                                 <td>Development:</td>
-                                                <td>4 h 30 m</td>   
+                                                <td>4 h</td>   
                                             </tr>
                                             <tr>
                                                 <td>Bugfixing:</td>
-                                                <td>2 h 30 m</td>   
+                                                <td>3 h</td>   
                                             </tr>
                                             <tr class="final">
                                                 <td>Total</td>
@@ -547,7 +547,28 @@
                                         </tbody>
                                     </table>
                                 <p>
-                                    This was the 2nd week of last feature add sprint.
+                                    This was the 2nd week of last feature add sprint, with 2 primary additions to the UI features.
+                                    The first was a permanent space on the main HUD to display the player's current currency and key count.
+                                    This primarily consisted of retrieving the current state of the player inventory, as well as adding the appropriate callback setups to update the displays.
+                                    The logic for the currency display was also extended to the shop menu as well.
+                                    The second feature was a main HUD icon for indication that the player regained ammo, which stemmed from playtest feedback that stated that it was confusing what the existing ammo bar was, and what it did.
+                                    An icon was one way we hope to mitigate this confusion, and my goal for this week was to implement it to at least iterate upon in later QA weeks.
+                                    During the implementation of the ammo gain indicator, I was also able to make a few changes to the UIFade script, allowing for one fade sequence to start off where an interupted sequence left off.
+                                    <br>
+                                    <br>
+                                    The other major component of this week was art integration.
+                                    I was in charge of getting player shooting animations integrated with the player animation script,
+                                    as well as started working on player projectile effects for trailing and collision effects.
+                                    The shooting animation was pretty straightforwards, 
+                                    especially with the actual animation clip already created and with previous state implementations in the player animation script to reference for creating a new state for the shooting animations.
+                                    The art integration for the player projectile took a bit more work, some with misunderstandings with how the effects should look 
+                                    as well as needing to implement some logic for spawning and despawing trails and collisions. 
+                                    Trails and collisions notably required new game objects respectively for ease of spawning and despawning.
+                                    <br>
+                                    <br>
+                                    The rest of the week's work was mostly with bugfixing, 
+                                    such as preventing the opening cutscene from playing again on player death, 
+                                    as well as a few quick fixes for existing UI menus.
                                 </p>
                                 <div>
                                     <h5>Screenshots:</h5>
