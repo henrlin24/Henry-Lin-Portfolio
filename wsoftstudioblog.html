@@ -510,7 +510,7 @@
                         <div class="entry">
                             <h3>Weeks 9 & 10 (Mar 19 - Apr 1)</h3>
                             <div class="week">
-                                <h4>Week 9 - Work</h4>
+                                <h4>Week 9 - Last major UI Feature adds and Art Integration</h4>
                                     <table>
                                         <thead>
                                             <tr>
@@ -571,16 +571,28 @@
                                     as well as a few quick fixes for existing UI menus.
                                 </p>
                                 <div>
-                                    <h5>Screenshots:</h5>
-                                    <p>Melee Weapon UI Overhaul</p>
-                                    <img src="images/WSoft/Week6&7&8/Week6/2WeaponMeleeUI.png">
+                                    <h5>Screenshots: </h5>
+                                    <p>Permanent Inventory Display: </p>
+                                    <img src="images/WSoft/Week9&10/Week9/PermanentHudDisplay.gif">
+                                    <br>
+
+                                    <p>Ammo Reload HUD Display: </p>
+                                    <img src="images/WSoft/Week9&10/Week9/Ammo Reload HUD Icon.gif">
+                                    <br>
+
+                                    <p>Ammo Reload HUD Display with Interruption: </p>
+                                    <img src="images/WSoft/Week9&10/Week9/Ammo Reload HUD Icon - Interrupted Fade.gif">
+                                    <br>
+
+                                    <p>Player Shoot Animation: </p>
+                                    <img src="images/WSoft/Week9&10/Week9/PlayerShootAnimation.gif">
                                     <br>
 
                                 </div>
                                 
                             </div>
                             <div class="week">
-                                <h4>Week 10 - Sprint 2 QA:</h4>
+                                <h4>Week 10 - Last Feature Sprint QA Week:</h4>
                                 <table>
                                     <thead>
                                         <tr>
@@ -612,14 +624,41 @@
                                     </tbody>
                                 </table>
                                 <p>
-                                    QA week for last feature sprint.
+                                    QA week for the last feature sprint consisted of adding a interaction popup to interactable objects, finishing the art integration for the player projectile and collision, as well as working to get cutscenes fixed.
+                                    <br>
+                                    <br>
+                                    The interaction popup, which indicates what objects are interactable and how to interact with them, was using existing logic for the interaction progress bars, thus extending the fade feature to the popup as well.
+                                    <br>
+                                    <br>
+                                    Art integration for player projectiles, which was left unfinished from the previous week, was finally finished with fading trails that looked moreso how the art team wanted it.
+                                    Of note, fading trails did not look right previously as the fade was not actually applied on the trail sprite, but rather the parent container object.
+                                    The animations for the collisions were also successfully implmented this week.
+                                    <br>
+                                    <br>
+                                    For the cutscenes, the issue was that the opening cutscene wouldn't play again after starting a new game after last weeks' fix to prevent consecutive plays of the same cutscene.
+                                    This was fixed by resetting the stored data on a new game, and thus allowing for the cutscene to play again on new game.
+                                    <br>
+                                    <br>
+                                    Lastly, I also addressed an issue with projectile collisions not destroying the projectile when in collision with certain objects, such as the surrounding flames in encounter areas and other projectiles.
+                                    This was done by adding in default behavior to destroy the bullet if in contact with objects unaccounted for in existing branch statements.
+                                    <br>
+                                    <br>
+                                    Of note, I did also attend another playtest session by Matt Rader from Serenity Forge, 
+                                    where he gave positive feedback on the damage HUD and suggested for the player sprite to possibly flash on hits. 
                                 </p>
                                 <div>
                                     <h5>Screenshots: </h5>
-                                    <p>Currency Popup Update w/ accumulation: </p>
-                                    <img src="images/WSoft/Week6&7&8/Week7/CurrencyPopupWithAccumulation.gif">
+                                    <p>Finished Pistol Projectile Art Integration: </p>
+                                    <img src="images/WSoft/Week9&10/Week10/Pistol Art Integration - Fading Trails.gif">
                                     <br>
 
+                                    <p>Interaction Popup: </p>
+                                    <img src="images/WSoft/Week9&10/Week10/Interaction Pickup Popup.gif">
+                                    <br>
+
+                                    <p>Projectile Collision Fix - Projectile on Projectile: </p>
+                                    <img src="images/WSoft/Week9&10/Week10/Projectile on Projectile Fix.gif">
+                                    <br>
                                 </div>
 
                                 <br>
