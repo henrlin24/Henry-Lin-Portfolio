@@ -669,11 +669,11 @@
                            
                         </div> <!-- Entry -->
 
-                        <!-- Post 5 -->
+                        <!-- Post 6 -->
                         <div class="entry">
                             <h3>Weeks 11 & 12 (Apr 2 - Apr 15)</h3>
                             <div class="week">
-                                <h4>Week 11 - Week before last</h4>
+                                <h4>Week 11 - Last QA Weeks Pt One</h4>
                                     <table>
                                         <thead>
                                             <tr>
@@ -684,45 +684,74 @@
                                         <tbody>
                                             <tr>
                                                 <td>Meetings and logistics:</td>
-                                                <td>3 h</td>   
-                                            </tr>
-                                            <tr>
-                                                <td>Documentation, planning, and testing:</td>
-                                                <td>30 m</td>    
-                                            </tr>
-                                            <tr>
-                                                <td>Art Integration</td>
-                                                <td>5 hours</td>
+                                                <td>5 h</td>   
                                             </tr>
                                             <tr>
                                                 <td>Development:</td>
-                                                <td>4 h</td>   
+                                                <td>1 h 30 m</td>   
                                             </tr>
                                             <tr>
                                                 <td>Bugfixing:</td>
-                                                <td>3 h</td>   
+                                                <td>6 h 30 m</td>   
                                             </tr>
                                             <tr class="final">
                                                 <td>Total</td>
-                                                <td>14 h 30 m</td>   
+                                                <td>13 h</td>   
                                             </tr>
                                             
                                         </tbody>
                                     </table>
                                 <p>
-
+                                    This week was the first of the last QA weeks, where the main focus was on getting the game as complete and stable as it could before launch on April 18th.
+                                    My first task for the week consisted of converting the interaction popup text from using images to text, which would allow for design members to more easily customize the text content.
+                                    Other bugs and updates included fixing an issue with the main melee UI not updating correctly, 
+                                    a simple adjustment of enemy health bar color for design, 
+                                    modifying the cutscene skip button animation to run in unscaled time to account for the time scale being set to zero during cutscenes, 
+                                    and adding behavior to continue highlighting subcategories in the settings UI per a request from design.
+                                    <br>
+                                    <br>
+                                    I did also struggle a bit with replicating an issue with the "acquire" console command, where it was reported that certain commands would not work under certain conditions.
+                                    However, after replicating the conditions to the best of my abilities, I was not able to replicate the issue and submitted recordings showing as such.
+                                    <br>
+                                    <br>
+                                    My most notable contributions this week would, however be adding a cooldown for abilities. 
+                                    This was done to address an issue accounted from playtesting, where it was observed that triggering abilities could be spammed to an annoying effect.
+                                    The cooldown feature, implemented using a few booleans and counter variables, were parameterized to allow other studio members to modify the timing without too much effort.
+                                    <br>
+                                    <br>
+                                    I also spent a few hours total helping design with Unity-related questions, such as with how prefabs worked and where to find specific game objects.
+                                    This was an unique experience, as I found myself in the rare position where I was instead the one with the ability to help others learn.
                                 </p>
                                 <div>
                                     <h5>Screenshots: </h5>
-                                    <p>Permanent Inventory Display: </p>
-                                    <img src="images/WSoft/Week9&10/Week9/PermanentHudDisplay.gif">
+                                    <p>Skip button animation fix: </p>
+                                    <img src="images/WSoft/Weeks11&12/Week11/SkipButtonNowOnRealTime.gif">
                                     <br>
 
+                                    <p>Enemy Health Bar Recolor: </p>
+                                    <img src="images/WSoft/Weeks11&12/Week11/RedEnemyBar.png">
+                                    <br>
+
+                                    <p>Settings Submenu Fix: </p>
+                                    <img src="images/WSoft/Weeks11&12/Week11/SettingsSubmenuBehaviorFix.gif">
+                                    <br>
+
+                                    <p>"Acquire" Console Command Fix Replication Attempt 1: </p>
+                                    <img src="images/WSoft/Weeks11&12/Week11/AcquireCommandCheck1.gif">
+                                    <br>
+
+                                    <p>"Acquire" Console Command Fix Replication Attempt 2: </p>
+                                    <img src="images/WSoft/Weeks11&12/Week11/AcquireCommandCheck2.gif">
+                                    <br>
+
+                                    <p>Adjustable Ability Cooldown: </p>
+                                    <img src="images/WSoft/Weeks11&12/Week11/AdjustableAbilityCooldown.gif">
+                                    <br>
                                 </div>
                                 
                             </div>
                             <div class="week">
-                                <h4>Week 10 - Last Feature Sprint QA Week:</h4>
+                                <h4>Week 12 - Last QA Weeks Pt Two</h4>
                                 <table>
                                     <thead>
                                         <tr>
