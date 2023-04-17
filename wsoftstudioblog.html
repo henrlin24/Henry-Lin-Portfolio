@@ -765,16 +765,12 @@
                                             <td>2 h</td>   
                                         </tr>
                                         <tr>
-                                            <td>Documentation, planning, and testing:</td>
-                                            <td>30 m</td>   
-                                        </tr>
-                                        <tr>
-                                            <td>Development:</td>
-                                            <td>2 h</td>   
+                                            <td>Art Integration</td>
+                                            <td>30 m</td>
                                         </tr>
                                         <tr>
                                             <td>Bugfixing:</td>
-                                            <td>6 h</td>   
+                                            <td>11 h</td>   
                                         </tr>
                                         <tr>
                                             <td>Total</td>
@@ -783,7 +779,52 @@
                                     </tbody>
                                 </table>
                                 <p>
-
+                                    The last week consisted of a final push trying to fix what bugs we could before the cutoff deadline of midnight of April 15th.
+                                    <br>
+                                    <br>
+                                    The first bugs I would address were fixes to the main HUD and repeating cutscenes.
+                                    Elements of the main HUD had appeared out of view due to Canvas scaling changes from a pull request.
+                                    Although the cause and fix were simple, this was somewhat time consuming as I had to modify and apply all the changes to the transforms for each affected element.
+                                    The cutscene bug intially confused me, as I had addressed this bug in prior weeks to presumed success.
+                                    A look quickly allowed me to notice an oversight, where the variable tracking if a cutscene was being repeated was being overwritten.
+                                    This was accounted for easily by changing to use of a static variable, such that any changes to the variable were retained across reloads and scene changes.
+                                    <br>
+                                    <br>                           
+                                    The next series of bug fixes would occur at the final studio work session on April 14th, 
+                                    where I adjusted mostly visual bugs such as making the interact UI visible by modifying layer priority, 
+                                    updating interaction UI placement, 
+                                    readjusting the controller mapping in the settings (which was pretty time consuming, similar to the main HUD fix),
+                                    and the text content for when interacting with the treasure chest.
+                                    <br>
+                                    <br>
+                                    Come April 15th, the deadline for code fixes, I would fix my final batch of bug fixes and adjustments.
+                                    For the currency popup, I added a background to allow for better visibility, as well as added behavior to ignore popup generation on zero currency gain.
+                                    I fixed buggy input behavior for when players would continue moving after interacting with the shop or an encounter, 
+                                    where prior input would get buffered and repeated, causing unintended movement.
+                                    Of note, my intial fix for this issue would actually disable dashing and otherwise cause confusing behavior with the player controller script due to having movement input voided in too many scenarios.
+                                    To address this, I applied my movement input reset modifications to specific instances instead, in this case to when interacting with the shop or entering an enemy encounter.
+                                    This appeared to fix the issues, both the intial and the one caused by me, appeasing my department lead (hi Nikhil, sorry guys).
+                                    <br>
+                                    <br>
+                                    My final major fix would be in regards the player death animation, where the buggy behavior had the player continue to be hit and trigger death behavior after death, 
+                                    as well as teleporting to a checkpoint before the screen had yet to successfully fade to black.
+                                    The first portion of the issues was addressed by disabling further hits during the death sequence by using a boolean condition check.
+                                    The second poriton, however, took a lot of time as I struggled to narrow down where to add a potential delay to the respawn logic and give more time for fade in first.
+                                    In the end, after having consulted with the programming lead, I was able to locate the event calls associated with the issue, and reordered and delayed them as needed to fix the issue.
+                                    <br>
+                                    <br>
+                                    Of note, I would be asked to address a separate bug in the middle of digging for this specific logic, in regards to fixing unintend interaction text behavior with the treasure chest.
+                                    This required creating behavior accounting for interactables that were not destroyed when interaction was "completed" as the player could continue another "cycle" 
+                                    of updating the interaction progress bar, which did not look the best.
+                                    Although the fix itself was not difficult in hindsight, narrowing down the cause of the bug cost me some time, and had me consulting various other studio members for a fix.
+                                    <br>
+                                    <br>
+                                    Overall, even with the last crunch to fix as much as I could before the deadline, I was able to fix all the issues that I had taken up to satisfaction.
+                                    In hindsight, this last week of final bug fixes was one of the best moments that I will remember from this studio cycle.
+                                    There was a sense of camaraderie when the entire studio was working up to the deadline, and it made me really feel as if our work was worthwhile.
+                                    <br>
+                                    <br>
+                                    WolverineSoft Studio was great, and I'm glad I got to take part. 
                                 </p>
                                 <div>
                                     <h5>Screenshots: </h5>
@@ -796,7 +837,7 @@
                                 <br>
                                 <hr>
 
-                                <h4>Total time: 14.5 + 13.5 h = 28 h</h4>
+                                <h4>Total time: 13 h + 13.5 h = 26.5 h</h4>
                             </div>      
                            
                         </div> <!-- Entry -->
