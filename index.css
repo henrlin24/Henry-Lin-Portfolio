@@ -5,6 +5,7 @@
 
 html, body {
     height: 100%;
+    width: 100%;
 }
 
 body {
@@ -42,7 +43,11 @@ header {
     align-items: center;
 }
 
+.section#about .sub-section {
+}
+
 .section#about .sub-section2 {
+    flex-shrink: 1.5;
     margin-left: 2em;
 }
 
@@ -65,13 +70,19 @@ header {
     outline: solid #017fb1;
 }
 
+img {
+    width: 100%;
+}
+
 /* To be use for setting size for game thumbnails */
 img.game_thumbnail {
-    height: 25em;
+    height: auto;
+    max-width: 100%;
 }
 
 img#ID_pic {
-    max-height: 20em;
+    height: auto;
+    max-width: 100%;;
 }
 
 #footer {
