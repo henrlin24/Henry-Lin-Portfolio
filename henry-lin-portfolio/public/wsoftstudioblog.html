@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Silkscreen">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish">
+            <link rel="stylesheet" href="index.css">
+            <link rel="stylesheet" href="blog.css">
+        </head>
+        <body>
+            <div id="wrap">
+                <header>
+                    <h1>Henry Lin - Curse of the Corsair Devblog</h1>    
+                </header>
+                <br>
+                <div id="main">
+
+                    <div class="section">
+                        <a href="index.html"><strong>Back to main portfolio page</strong></a>
+                    </div>
+
+                    <br>
+
+                    <div class="section" id="blog">
+                        <h2>WolverineSoft Studio Winter 2023 Dev Blog</h2>
+                        <p>Below are (or will be) entries for my work for WolverineSoft Studio's Winter 2023 Project.</p>
+
+                        <!-- Post 1-->
+                        <div class="entry">
+                            <h3>Week 1 (Jan 15 - Jan 21)</h3>
+                            <h4>Setup and onboarding tasks</h4>
+                            <p>
+                                Setup included getting SourceTree set up and running as my Git client, as well as getting my Jira/Confluence/BitBucket account.
+                                As part of the programming team onboarding, we were to also implement either a console command or achievement.
+                                I implemented a console command to obtain the contents of the player inventory, and successfully created my first pull request for the project.
+                            </p>
+                        </div> <!--Entry -->
+
+                        <!-- Post 2 -->
+                        <div class="entry">
+                            <h3>Weeks 2 & 3 (Jan 22 - Feb 4)</h3>
+                                <details>
+                                    <summary><strong>Week 2 - Basic HUD:</strong></summary>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Category</th>
+                                                <th>Time</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Meetings and logistics:</td>
+                                                <td>3 h</td>   
+                                            </tr>
+                                            <tr>
+                                                <td>Documentation, planning, and testing:</td>
+                                                <td>3 h</td>   
+                                            </tr>
+                                            <tr>
+                                                <td>Development:</td>
+                                                <td>8 h</td>   
+                                            </tr>
+                                            <tr class="final">
+                                                <td>Total</td>
+                                                <td>14 h</td>   
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
+                                    <p>
+                                        For the second week, I started working on the main HUD, specifically on health bar modifications and a few general UI scripts.
+                                        I spent an hour or so looking through the UI design documentation, as well as looking through the existing codebase to see what I was working off of.
+                                        A placeholder health bar display object was already in place, to which I added threshold and corresponding color parameters to better indicate low player health in another hour.
+                                        <br>
+                                        I then created a general UI fade, lerp, and shake scripts.
+                                        Testing out different methods to create a shaking healthbar on hit would overall be a needless timesink in hindsight, as I spent around 3-4 hours testing out different methods.
+                                        The lerp and shake scripts were the end results of testing different methods to produce the health shake effect.
+                                        I would also try to test out Mathf.PingPong(), but that turned out to not work as well as the Lerp and shake implementation.
+                                        The final "shake" script utilzed Hooke's Law, the application of which I learned from EECS 494. For the shake script, I also created the corresponding Unity event and listener.
+                                        <br>
+                                        The UI fade ended up taking about an hour, and an overall much better utilization of time.
+                                    </p>
+                                    <div>
+                                        <h5>Screenshots:</h5>
+                                        <p>Health fade and health thresholds</p>
+                                        <img src="images/WSoft/Week2&3/HealthFade.gif">
+                                        <img src="images/WSoft/Week2&3/HealthThresholds.gif">   
+                                    </div>
+                                </details>
+                                <details>
+                                    <summary><strong>Week 3 - HUD additions and fixes, Weapon UI:</strong></summary>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Category</th>
+                                                <th>Time</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Meetings and logistics:</td>
+                                                <td>3 h</td>   
+                                            </tr>
+                                            <tr>
+                                                <td>Documentation, planning, and testing:</td>
+                                                <td>2 h 30 m</td>   
+                                            </tr>
+                                            <tr>
+                                                <td>Development:</td>
+                                                <td>6 h</td>   
+                                            </tr>
+                                            <tr>
+                                                <td>Bugfixing:</td>
+                                                <td>2 h</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total</td>
+                                                <td>13 h 30 m</td>   
+                                            </tr> 
+                                        </tbody>
+                                    </table>
+                                    <p>
+                                        For the third week, I updated and made additions to main HUD features from week 2, created a basic title scene, as well as implemented an initial weapon UI display.
+                                        To start, I updated a the lerp and fade scripts from week 2 to work as callback functions for future events, taking about 30 minutes including consulting my programming lead.
+                                        <br>
+                                        I then updated the health bar display to work with the new shield system, as well create a shield UI display.
+                                        The shield UI display also included creating a Unity event and listener to update shield UI when it regenerates or decreases.
+                                        I then went about to creating a stamina bar, which was an UI element that was to be attached to the player object, and thus relative to the player's position on the screen.
+                                        This was done by making a UI canvas that was a child to the player object.
+                                        The shields and stamina would take about an hour each, for two hours total between the two.
+                                        <br>
+                                        I then worked on the title scene, of which most of the two hours developing was spent relearning how buttons and onclick functionality worked in Unity.
+                                        A main menu and placeholders for submenus (e.g. settings and credits) was created for this initial title screen.
+                                        <br>
+                                        Finally, I created the weapon UI display, which would turn out to be two sibling displays for melee and ranged weapons respectively.
+                                        About 1.5 hours was spent looking into the design specifications and looking into how the weapon UI looked in Hyper Light Drift.
+                                        I then spent about 1.5 hours creating the initial melee weapon UI.
+                                        Another 1.5 hours was spent on refining some issues, such as display layer priority, as well as implementing a corresponding ranged weapon UI.
+                                        My build notably did encounter a few issues during the weapon UI development, and led to me having to reset my progress a few times.
+                                        The player would not be able to move during playtesting, and would not load in a default weapon to test the weapon UI with.
+                                        After consulting my programming lead and creating a new branch, I managed to get the weapon UI working again but it stil ate up aobut 2 hours here.
+                                        I then spent about 30 minutes readjusting the UI after merging in from the master to minimize bugs when merging, and made my final feature pull request for the sprint.
+                                    </p>
+                                    <div>
+                                        <h5>Screenshots: </h5>
+                                        <p>Shield and stamina bars:</p>
+                                        <img src="images/WSoft/Week2&3/ShieldBar.gif">
+                                        <img src="images/WSoft/Week2&3/StaminaBar.gif">
+                                        <br>
+
+                                        <p>Title screen:</p>
+                                        <img src="images/WSoft/Week2&3/TitleScene.gif">
+                                        <img src="images/WSoft/Week2&3/TitleSceneAlt.gif">
+                                        <br>
+
+                                        <p>Weapon UI:</p>
+                                        <img src="images/WSoft/Week2&3/WeaponUI.gif">
+                                    </div>
+                                </details>
+                            <h4>Total time: 27 h 30 m</h4>
+                        </div> <!-- Entry -->
+
+                        <!-- Post 3 -->
+                        <div class="entry">
+                            <h3>Weeks 4 & 5 (Feb 5 - Feb 18)</h3>
+                            <details>
+                                <summary><strong>Week 4 - Sprint 1 QA:</strong></summary>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Category</th>
+                                            <th>Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Meetings and logistics:</td>
+                                            <td>2 h</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Development:</td>
+                                            <td>2 h</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Bugfixing:</td>
+                                            <td>7 h 30 m</td>   
+                                        </tr>
+                                        <tr class="final">
+                                            <td>Total</td>
+                                            <td>11 h 30 m</td>   
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                                <p>
+                                    Week 4 was the last week of the first sprint, which served as a QA week to fix bugs.
+                                    Notable bugs I fixed during this week include fixing UI layering for UI elements, 
+                                    image scaling issues with the health and shield bar icons, 
+                                    and updated the underlying model of the ranged weapon UI.
+                                    <br>
+                                    Other tasks included fixing features that did that get merged correctly to the master branch, 
+                                    adjusting HUD elements to design changes, 
+                                    making the pause menu actually pause in-game time, 
+                                    as well as working to ensure movement settings on the title screen can be adjusted and retained across scenes.
+                                </p>
+                                <div>
+                                    <h5>Screenshots:</h5>
+                                    <p>HUD Overlay fix</p>
+                                    <img src="images/WSoft/Week4&5/HUDOverlayFix.png">
+                                    <br>
+
+                                    <p>Repositioned Stamina Bar</p>
+                                    <img src="images/WSoft/Week4&5/ReplacedStaminaBar.gif">   
+                                </div>
+                            </details>
+                            <details>
+                                <summary><strong>Week 5 - Mentor Playtesting & UI Overhaul:</strong></summary>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Category</th>
+                                            <th>Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Meetings and logistics:</td>
+                                            <td>3 h</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Documentation, planning, and testing:</td>
+                                            <td>1 h</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Development:</td>
+                                            <td>8 h 30 m</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td>12 h 30 m</td>   
+                                        </tr> 
+                                    </tbody>
+                                </table>
+                                <p>
+                                    In Week 5, I attended one the studio's first mentor playtest and feedback sessions by Matt Rader from Serenity Forge.
+                                    Notable UI feedback were how the normally inactive HUD impacted the playthough by making it hard to tell stamina and ammo levels, 
+                                    aiming inaccuracies, 
+                                    the inconsistency between an ammo HUD that afforded moreso discrete ammo amounts rather than fractional values.
+                                    The lack of enemy UI and a lack of a "quit-to-title" option through the pause menu.
+                                    <br>
+                                    In terms of the tasks I completed this week, 
+                                    I again overhauled the weapon UI, 
+                                    this time entirely removing the ranged weapon UI and revamping the melee weapon UI. 
+                                    Specifically, the melee weapon UI is to show all possible options, and show the currently active option.
+                                    <br>
+                                    The pause menu option to quit to title or desktop was also implemented this week, 
+                                    opening an additional submenu to allow the player to quit to title, quit the game, or just close the pause menu again using the ESC button. 
+                                    <br>
+                                    Work was also done on the boss health bar and interactable UI.
+                                </p>
+                                <div>
+                                    <h5>Screenshots: </h5>
+                                    <p>New weapon UI:</p>
+                                    <img src="images/WSoft/Week4&5/WeaponUIOverhaul.png">
+                                    <br>
+
+                                    <p>Boss Health Bar:</p>
+                                    <img src="images/WSoft/Week4&5/BossHealthUI.gif">
+                                    <br>
+
+                                    <p>Interactable UI:</p>
+                                    <img src="images/WSoft/Week4&5/InteractionUI.gif">
+                                    <br>
+                                </div>
+                            </details>
+                            <h4>Total time: 24 h</h4>      
+                        </div> <!-- Entry -->
+
+                        <!-- Post 4 -->
+                        <div class="entry">
+                            <h3>Weeks 6, 7, & 8 (Feb 19 - Feb 25, Mar 5 - Mar 18)</h3>
+                            <details>
+                                <summary><strong>Week 6 - Mentor Playtesting & More Weapon UI Overhaul:</strong></summary>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Category</th>
+                                            <th>Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Meetings and logistics:</td>
+                                            <td>4 h</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Development:</td>
+                                            <td>7 h</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Bugfixing:</td>
+                                            <td>30 m</td>   
+                                        </tr>
+                                        <tr class="final">
+                                            <td>Total</td>
+                                            <td>11 h 30 m</td>   
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                                <p>
+                                    Week 6 was the last week of the second sprint, where I worked primarily with implementing an updated melee weapon HUD to account for the removal of one of the three melee weapons from the game.
+                                    The weapon UI was made to account for the finalized weapon system, consisting of a primary and secondary weapon, where the primary weapon was to be the active weapon.
+                                    Sprites were directly added to the individual weapons to allow for ease of reference when updating the weapon UI sprites.
+                                    <br>
+                                    <br>
+                                    A few other features that I would add would be a popup that was to appear on currency gains, a simple enemy healthbar attached to all existing non-boss enemies, as well got the previous interactble UI working with the new interaction system implemented by Jasmine, a fellow programming member.
+                                    The interaction UI progress bar of note would be integrated by Brandon, also from programming, for a further improved interaction system that gave the designers more flexibility of implementation.
+                                    This was one of the few times I was able to interact with other programming members on a feature I implemented, and it was pretty fulfilling participating the process of making the interaction system come to life.
+                                    <br>
+                                    <br>
+                                    I also attended two more mentor sessions this week: a playtest session with WSoft alumni Grace Ma, and a programming mentoring session with Matt Rader.
+                                    The playtest session provided feedback moreso valuable for the art and design department, but did give valuable insight as to how well the previous week's UI implementation worked.
+                                    The suggestion for audio settings was also mentioned here, and would be added in a later week. The mentorship session provided valuable insight on how to plan out portfolio and resume entries for projects.
+                                    A few recommendations were also given on valuable skills to pickup, one of which was to get experience on tools programming.
+                                </p>
+                                <div>
+                                    <h5>Screenshots:</h5>
+                                    <p>Melee Weapon UI Overhaul</p>
+                                    <img src="images/WSoft/Week6&7&8/Week6/2WeaponMeleeUI.png">
+                                    <br>
+
+                                    <p>Enemy Health Bar</p>
+                                    <img src="images/WSoft/Week6&7&8/Week6/EnemyHealthBars.gif">
+                                    <br>
+
+                                    <p>Currency Popup</p>
+                                    <img src="images/WSoft/Week6&7&8/Week6/CurrencyPopup.gif">
+                                    <br>
+
+                                    <p>Interaction Progress Bar</p>
+                                    <img src="images/WSoft/Week6&7&8/Week6/InteractionUI.gif">
+                                    <br>  
+                                </div>
+                            </details>
+                            <details>
+                                <summary><strong>Week 7 - Sprint 2 QA:</strong></summary>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Category</th>
+                                            <th>Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Meetings and logistics:</td>
+                                            <td>2 h</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Documentation, planning, and testing:</td>
+                                            <td>30 m</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Development:</td>
+                                            <td>5 h</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Bugfixing:</td>
+                                            <td>3 h 30 m</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td>11 h</td>   
+                                        </tr> 
+                                    </tbody>
+                                </table>
+                                <p>
+                                    This was the QA week for sprint 2, where I focused on improving existing features, such as the currency popup and enemy health bars.
+                                    Of note, the currency popup required some work as the initial implementation did not work as the Unity event invokation did not work correctly.
+                                    I would end up instead using an existing Eventbus event for callback for when there was a currency gain event.
+                                    In addition, I also had to account for popup behavior for multiple currency gain events occuring concurrently (e.g. killing multiple enemies within a short time frame).
+                                    I ended up implementing a system where multiple instances that occured within a period of time would instead accumulate, and result in a single popup showing the accumulated gain.
+                                    The specific period of time was parameterized to allow for ease of testing of different values for designers.
+                                    <br>
+                                    <br>
+                                    My other big task for this week was to implement an "acquire" console command, which would allow for instant acquisition of the spear weapon, as well all the guns.
+                                    This was highly requested during the studio playtest session. There were some hiccups in testing this feature, mostly due to an issue in my testing scene as well as in missing player animations at the time.
+                                    <br>
+                                    <br>
+                                    The rest of the week's tasks consisted of mostly HUD and UI fixes, such as enemy health bars appearing below the level tilemap, the shop not stopping time when active, 
+                                    the player attacking when clicking to exit the shop, as well as a reported bug for attacks not having a SFX when just swinging at the air.
+                                    I would break down the enemy health bars into cells, similar to the player health bar, at the request of design.
+                                </p>
+                                <div>
+                                    <h5>Screenshots: </h5>
+                                    <p>Currency Popup Update w/ accumulation: </p>
+                                    <img src="images/WSoft/Week6&7&8/Week7/CurrencyPopupWithAccumulation.gif">
+                                    <br>
+
+                                    <p>Acquire Console Command :</p>
+                                    <img src="images/WSoft/Week6&7&8/Week7/AcquireConsoleCommandMelee.gif">
+                                    <img src="images/WSoft/Week6&7&8/Week7/AcquireConsoleCommandRanged.gif">
+                                    <br>
+
+                                    <p>Enemy Health Bar Update: </p>
+                                    <img src="images/WSoft/Week6&7&8/Week7/EnemyHealthBarCells.gif">
+                                    <br>
+                                </div>
+                            </details>
+                            <details>
+                                <summary><strong>Week 8 - Combat and Title HUD:</strong></summary>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Category</th>
+                                            <th>Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Meetings and logistics:</td>
+                                            <td>3 h</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Documentation, planning, and testing:</td>
+                                            <td>30 m</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Development:</td>
+                                            <td>8 h</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Bugfixing:</td>
+                                            <td>30 m</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td>12 h</td>   
+                                        </tr> 
+                                    </tbody>
+                                </table>
+                                <p>
+                                    This was the start of the last feature-add sprint, where I focused on three primary features/updates: player damage HUD, a final currency display overhaul, and confirmation menus for the Title scene.
+                                    <br>
+                                    <br>
+                                    For the damage HUD, I originally went about creating a transparent PNG image with a gradient border, where the designers could change the color and whatnot as needed.
+                                    However, insight from a fellow programming member (shoutout to Kevin) led me to instead use the Unity Post Processing packgage, where use of a Volume object to produce a vignette effect was able to achieve the same effect.
+                                    Benefits of using the Post Processing package, such as the ability to change the scale and intensity of the effect, as well as giving access to potential additional visual effects later on, 
+                                    were some of the reasons I went instead with the Unity package instead of the initial transparent PNG idea.
+                                    <br>
+                                    <br>
+                                    The currency popup UI saw another overhaul in the form of visuals, as well as in how multiple instances of currency gains were to be treated. 
+                                    A separate popup was to be generated for each currency gain instance, which required me to instantiate popup objects instead of using and modifying one popup, as I did in the initial implementation.
+                                    The main difference, however, was now I also had to account for visual behavior for multiple popups: new popups were to appear below previous ones, as well as move up in accordance to older popups expiring.
+                                    At first, I tried going about coding this feature from scratch (e.g. keeping popup references in a list/stack, and updating positions through lerps), but realized that Unity had a Vertical Layout feature.
+                                    There was a bit of tweaking involved in getting the popups to look correctly, as well as update existing popup positions when an older popup expired, but it was much easier than to code it from scratch.
+                                    It also provided existing parameters for designers to adjust.
+                                    <br>
+                                    <br>
+                                    Additional changes include a new modal menu to confirm selections on the Title screen, such as for the "New Game" and "Quit" options, 
+                                    as well as rolling back an erroneous weapon SFX change from the previous QA week.
+                                    I also attended a playtest session by Jordan Ajlouni, where notable suggestions and observations included: 
+                                    the Title screen was a bit confusing, HUD was to be disabled during cutscenes, effects to indicate hit on player, skip button for cutscene, keyprompt for interactables, and a permanent currency display.
+                                    Many of these issues would be addressed during the week, as well as in later development.
+                                    <br>
+                                    <br>
+                                    Of note, it was around this period that I started to consider ease of modification for designers and other non-programmers in the studio.
+                                    I've always noticed a few members consistently doing so, and after inquires from design on how to modify features that I previously modified, I started to parameterize more to make things a bit easier.
+                                    It also made the UI work a little more interesting as well (:p).
+                                </p>
+                                <div>
+                                    <h5>Screenshots: </h5>
+                                    <p>Currency Popup Overhaul:</p>
+                                    <img src="images/WSoft/Week6&7&8/Week8/CurrencyPopupOverhaul.gif">
+                                    <br>
+
+                                    <p>Player Hit Indicator:</p>
+                                    <img src="images/WSoft/Week6&7&8/Week8/PlayerHitIndicator.gif">
+                                    <br>
+
+                                    <p>Title Screen Confirmation Menus:</p>
+                                    <img src="images/WSoft/Week6&7&8/Week8/TitleScreenConfirmationModalMenu.gif">
+                                    <br>
+                                </div>
+                            </details>
+                            <h4>Total time: 34 h 30 m</h4>
+                        </div> <!-- Entry -->
+
+                        <!-- Post 5 -->
+                        <div class="entry">
+                            <h3>Weeks 9 & 10 (Mar 19 - Apr 1)</h3>
+                            <details>
+                                <summary><strong>Week 9 - Last major UI Feature adds and Art Integration</strong></summary>
+                                <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Category</th>
+                                                <th>Time</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Meetings and logistics:</td>
+                                                <td>2 h</td>   
+                                            </tr>
+                                            <tr>
+                                                <td>Documentation, planning, and testing:</td>
+                                                <td>30 m</td>    
+                                            </tr>
+                                            <tr>
+                                                <td>Art Integration</td>
+                                                <td>5 hours</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Development:</td>
+                                                <td>4 h</td>   
+                                            </tr>
+                                            <tr>
+                                                <td>Bugfixing:</td>
+                                                <td>3 h</td>   
+                                            </tr>
+                                            <tr class="final">
+                                                <td>Total</td>
+                                                <td>14 h 30 m</td>   
+                                            </tr>
+                                            
+                                        </tbody>
+                                </table>
+                                <p>
+                                    This was the 2nd week of last feature add sprint, with 2 primary additions to the UI features.
+                                    The first was a permanent space on the main HUD to display the player's current currency and key count.
+                                    This primarily consisted of retrieving the current state of the player inventory, as well as adding the appropriate callback setups to update the displays.
+                                    The logic for the currency display was also extended to the shop menu as well.
+                                    The second feature was a main HUD icon for indication that the player regained ammo, which stemmed from playtest feedback that stated that it was confusing what the existing ammo bar was, and what it did.
+                                    An icon was one way we hope to mitigate this confusion, and my goal for this week was to implement it to at least iterate upon in later QA weeks.
+                                    During the implementation of the ammo gain indicator, I was also able to make a few changes to the UIFade script, allowing for one fade sequence to start off where an interupted sequence left off.
+                                    <br>
+                                    <br>
+                                    The other major component of this week was art integration.
+                                    I was in charge of getting player shooting animations integrated with the player animation script,
+                                    as well as started working on player projectile effects for trailing and collision effects.
+                                    The shooting animation was pretty straightforwards, 
+                                    especially with the actual animation clip already created and with previous state implementations in the player animation script to reference for creating a new state for the shooting animations.
+                                    The art integration for the player projectile took a bit more work, some with misunderstandings with how the effects should look 
+                                    as well as needing to implement some logic for spawning and despawing trails and collisions. 
+                                    Trails and collisions notably required new game objects respectively for ease of spawning and despawning.
+                                    <br>
+                                    <br>
+                                    The rest of the week's work was mostly with bugfixing, 
+                                    such as preventing the opening cutscene from playing again on player death, 
+                                    as well as a few quick fixes for existing UI menus.
+                                </p>
+                                <div>
+                                    <h5>Screenshots: </h5>
+                                    <p>Permanent Inventory Display: </p>
+                                    <img src="images/WSoft/Week9&10/Week9/PermanentHudDisplay.gif">
+                                    <br>
+
+                                    <p>Ammo Reload HUD Display: </p>
+                                    <img src="images/WSoft/Week9&10/Week9/Ammo Reload HUD Icon.gif">
+                                    <br>
+
+                                    <p>Ammo Reload HUD Display with Interruption: </p>
+                                    <img src="images/WSoft/Week9&10/Week9/Ammo Reload HUD Icon - Interrupted Fade.gif">
+                                    <br>
+
+                                    <p>Player Shoot Animation: </p>
+                                    <img src="images/WSoft/Week9&10/Week9/PlayerShootAnimation.gif">
+                                    <br>
+
+                                </div>
+                            </details>
+                            <details>
+                                <summary><strong>Week 10 - Last Feature Sprint QA Week:</strong></summary>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Category</th>
+                                            <th>Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Meetings and logistics:</td>
+                                            <td>2 h</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Documentation, planning, and testing:</td>
+                                            <td>30 m</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Development:</td>
+                                            <td>2 h</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Bugfixing:</td>
+                                            <td>6 h</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td>13 h 30 m</td>   
+                                        </tr> 
+                                    </tbody>
+                                </table>
+                                <p>
+                                    QA week for the last feature sprint consisted of adding a interaction popup to interactable objects, finishing the art integration for the player projectile and collision, as well as working to get cutscenes fixed.
+                                    <br>
+                                    <br>
+                                    The interaction popup, which indicates what objects are interactable and how to interact with them, was using existing logic for the interaction progress bars, thus extending the fade feature to the popup as well.
+                                    <br>
+                                    <br>
+                                    Art integration for player projectiles, which was left unfinished from the previous week, was finally finished with fading trails that looked moreso how the art team wanted it.
+                                    Of note, fading trails did not look right previously as the fade was not actually applied on the trail sprite, but rather the parent container object.
+                                    The animations for the collisions were also successfully implmented this week.
+                                    <br>
+                                    <br>
+                                    For the cutscenes, the issue was that the opening cutscene wouldn't play again after starting a new game after last weeks' fix to prevent consecutive plays of the same cutscene.
+                                    This was fixed by resetting the stored data on a new game, and thus allowing for the cutscene to play again on new game.
+                                    <br>
+                                    <br>
+                                    Lastly, I also addressed an issue with projectile collisions not destroying the projectile when in collision with certain objects, such as the surrounding flames in encounter areas and other projectiles.
+                                    This was done by adding in default behavior to destroy the bullet if in contact with objects unaccounted for in existing branch statements.
+                                    <br>
+                                    <br>
+                                    Of note, I did also attend another playtest session by Matt Rader from Serenity Forge, 
+                                    where he gave positive feedback on the damage HUD and suggested for the player sprite to possibly flash on hits. 
+                                </p>
+                                <div>
+                                    <h5>Screenshots: </h5>
+                                    <p>Finished Pistol Projectile Art Integration: </p>
+                                    <img src="images/WSoft/Week9&10/Week10/Pistol Art Integration - Fading Trails.gif">
+                                    <br>
+
+                                    <p>Interaction Popup: </p>
+                                    <img src="images/WSoft/Week9&10/Week10/Interaction Pickup Popup.gif">
+                                    <br>
+
+                                    <p>Projectile Collision Fix - Projectile on Projectile: </p>
+                                    <img src="images/WSoft/Week9&10/Week10/Projectile on Projectile Fix.gif">
+                                    <br>
+                                </div>
+                            </details>
+                            <h4>Total time: 28 h</h4>
+                        </div> <!-- Entry -->
+
+                        <!-- Post 6 -->
+                        <div class="entry">
+                            <h3>Weeks 11 & 12 (Apr 2 - Apr 15)</h3>
+                            <details>
+                                <summary><strong>Week 11 - Last QA Weeks Pt One</strong></summary>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Category</th>
+                                            <th>Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Meetings and logistics:</td>
+                                            <td>5 h</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Development:</td>
+                                            <td>1 h 30 m</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Bugfixing:</td>
+                                            <td>6 h 30 m</td>   
+                                        </tr>
+                                        <tr class="final">
+                                            <td>Total</td>
+                                            <td>13 h</td>   
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                                <p>
+                                    This week was the first of the last QA weeks, where the main focus was on getting the game as complete and stable as it could before launch on April 18th.
+                                    My first task for the week consisted of converting the interaction popup text from using images to text, which would allow for design members to more easily customize the text content.
+                                    Other bugs and updates included fixing an issue with the main melee UI not updating correctly, 
+                                    a simple adjustment of enemy health bar color for design, 
+                                    modifying the cutscene skip button animation to run in unscaled time to account for the time scale being set to zero during cutscenes, 
+                                    and adding behavior to continue highlighting subcategories in the settings UI per a request from design.
+                                    <br>
+                                    <br>
+                                    I did also struggle a bit with replicating an issue with the "acquire" console command, where it was reported that certain commands would not work under certain conditions.
+                                    However, after replicating the conditions to the best of my abilities, I was not able to replicate the issue and submitted recordings showing as such.
+                                    <br>
+                                    <br>
+                                    My most notable contributions this week would, however be adding a cooldown for abilities. 
+                                    This was done to address an issue accounted from playtesting, where it was observed that triggering abilities could be spammed to an annoying effect.
+                                    The cooldown feature, implemented using a few booleans and counter variables, were parameterized to allow other studio members to modify the timing without too much effort.
+                                    <br>
+                                    <br>
+                                    I also spent a few hours total helping design with Unity-related questions, such as with how prefabs worked and where to find specific game objects.
+                                    This was an unique experience, as I found myself in the rare position where I was instead the one with the ability to help others learn.
+                                </p>
+                                <div>
+                                    <h5>Screenshots: </h5>
+                                    <p>Skip button animation fix: </p>
+                                    <img src="images/WSoft/Weeks11&12/Week11/SkipButtonNowOnRealTime.gif">
+                                    <br>
+
+                                    <p>Enemy Health Bar Recolor: </p>
+                                    <img src="images/WSoft/Weeks11&12/Week11/RedEnemyBar.png">
+                                    <br>
+
+                                    <p>Settings Submenu Fix: </p>
+                                    <img src="images/WSoft/Weeks11&12/Week11/SettingsSubmenuBehaviorFix.gif">
+                                    <br>
+
+                                    <p>"Acquire" Console Command Fix Replication Attempt 1: </p>
+                                    <img src="images/WSoft/Weeks11&12/Week11/AcquireCommandCheck1.gif">
+                                    <br>
+
+                                    <p>"Acquire" Console Command Fix Replication Attempt 2: </p>
+                                    <img src="images/WSoft/Weeks11&12/Week11/AcquireCommandCheck2.gif">
+                                    <br>
+
+                                    <p>Adjustable Ability Cooldown: </p>
+                                    <img src="images/WSoft/Weeks11&12/Week11/AdjustableAbilityCooldown.gif">
+                                    <br>
+                                </div>
+                            </details>
+                            <details>
+                                <summary><strong>Week 12 - Last QA Weeks Pt Two</strong></summary>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Category</th>
+                                            <th>Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Meetings and logistics:</td>
+                                            <td>2 h</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Art Integration</td>
+                                            <td>30 m</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bugfixing:</td>
+                                            <td>11 h</td>   
+                                        </tr>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td>13 h 30 m</td>   
+                                        </tr> 
+                                    </tbody>
+                                </table>
+                                <p>
+                                    The last week consisted of a final push trying to fix what bugs we could before the cutoff deadline of midnight of April 15th.
+                                    <br>
+                                    <br>
+                                    The first bugs I would address were fixes to the main HUD and repeating cutscenes.
+                                    Elements of the main HUD had appeared out of view due to Canvas scaling changes from a pull request.
+                                    Although the cause and fix were simple, this was somewhat time consuming as I had to modify and apply all the changes to the transforms for each affected element.
+                                    The cutscene bug intially confused me, as I had addressed this bug in prior weeks to presumed success.
+                                    A look quickly allowed me to notice an oversight, where the variable tracking if a cutscene was being repeated was being overwritten.
+                                    This was accounted for easily by changing to use of a static variable, such that any changes to the variable were retained across reloads and scene changes.
+                                    <br>
+                                    <br>                           
+                                    The next series of bug fixes would occur at the final studio work session on April 14th, 
+                                    where I adjusted mostly visual bugs such as making the interact UI visible by modifying layer priority, 
+                                    updating interaction UI placement, 
+                                    readjusting the controller mapping in the settings (which was pretty time consuming, similar to the main HUD fix),
+                                    and the text content for when interacting with the treasure chest.
+                                    <br>
+                                    <br>
+                                    Come April 15th, the deadline for code fixes, I would fix my final batch of bug fixes and adjustments.
+                                    For the currency popup, I added a background to allow for better visibility, as well as added behavior to ignore popup generation on zero currency gain.
+                                    I fixed buggy input behavior for when players would continue moving after interacting with the shop or an encounter, 
+                                    where prior input would get buffered and repeated, causing unintended movement.
+                                    Of note, my intial fix for this issue would actually disable dashing and otherwise cause confusing behavior with the player controller script due to having movement input voided in too many scenarios.
+                                    To address this, I applied my movement input reset modifications to specific instances instead, in this case to when interacting with the shop or entering an enemy encounter.
+                                    This appeared to fix the issues, both the intial and the one caused by me, appeasing my department lead (hi Nikhil, sorry guys).
+                                    <br>
+                                    <br>
+                                    My final major fix would be in regards the player death animation, where the buggy behavior had the player continue to be hit and trigger death behavior after death, 
+                                    as well as teleporting to a checkpoint before the screen had yet to successfully fade to black.
+                                    The first portion of the issues was addressed by disabling further hits during the death sequence by using a boolean condition check.
+                                    The second poriton, however, took a lot of time as I struggled to narrow down where to add a potential delay to the respawn logic and give more time for fade in first.
+                                    In the end, after having consulted with the programming lead, I was able to locate the event calls associated with the issue, and reordered and delayed them as needed to fix the issue.
+                                    <br>
+                                    <br>
+                                    Of note, I would be asked to address a separate bug in the middle of digging for this specific logic, in regards to fixing unintend interaction text behavior with the treasure chest.
+                                    This required creating behavior accounting for interactables that were not destroyed when interaction was "completed" as the player could continue another "cycle" 
+                                    of updating the interaction progress bar, which did not look the best.
+                                    Although the fix itself was not difficult in hindsight, narrowing down the cause of the bug cost me some time, and had me consulting various other studio members for a fix.
+                                    <br>
+                                    <br>
+                                    Overall, even with the last crunch to fix as much as I could before the deadline, I was able to fix all the issues that I had taken up to satisfaction.
+                                    In hindsight, this last week of final bug fixes was one of the best moments that I will remember from this studio cycle.
+                                    There was a sense of camaraderie when the entire studio was working up to the deadline, and it made me really feel as if our work was worthwhile.
+                                    <br>
+                                    <br>
+                                    WolverineSoft Studio was great, and I'm glad I got to take part. 
+                                </p>
+                                <div>
+                                    <h5>Screenshots: </h5>
+                                    <p>Currency Popup Fix: </p>
+                                    <img src="images/WSoft/Weeks11&12/Week12/CurrencyBackgroundAndNoSpawnForZero.gif">
+                                    <br>
+
+                                    <p>Buggy Player Input after Shop - Before: </p>
+                                    <img src="images/WSoft/Weeks11&12/Week12/BuggedShopInteraction.gif">
+                                    <br>
+
+                                    <p>Buggy Player Input after Shop - After: </p>
+                                    <img src="images/WSoft/Weeks11&12/Week12/IntendedShopInteraction.gif">
+                                    <br>
+
+                                    <p>Buggy Player Input after Encounter - Before: </p>
+                                    <img src="images/WSoft/Weeks11&12/Week12/EncounterMovementBug.gif">
+                                    <br>
+
+                                    <p>Buggy Player Input after Encounter - After: </p>
+                                    <img src="images/WSoft/Weeks11&12/Week12/EncounterMovementBugFix.gif">
+                                    <br>
+
+                                    <p>Player Death Sequence - Before: </p>
+                                    <img src="images/WSoft/Weeks11&12/Week12/PlayerDeathBug.gif">
+                                    <br>
+
+                                    <p>Player Death Sequence - After: </p>
+                                    <img src="images/WSoft/Weeks11&12/Week12/PlayerDeathFixed.gif">
+                                    <br>
+
+                                </div>
+                            </details>
+                            <h4>Total time: 13 h + 13.5 h = 26.5 h</h4>                         
+                        </div> <!-- Entry -->
+                        
+                    </div> <!-- Blog -->
+
+                </div> <!-- main -->
+            </div> <!-- wrap -->
+
+            <div id="footer">
+                <div id="contact_info">
+                    <p><strong>Thanks for stopping visiting my website! Feel free to contact me at the following email address for any questions:</strong></p>
+                    <a href="mailto: henrlin@umich.edu">henrlin@umich.edu</a>
+                </div>
+            </div> <!-- footer -->
+        </body>
+    </html>
