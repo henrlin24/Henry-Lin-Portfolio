@@ -1,0 +1,167 @@
+@font-face {
+    font-family: Visitor;
+    src: url(fonts/visitor1.ttf);
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+
+    font-family: "Mulish" ,"Silkscreen", serif;
+    font-size: larger;
+    background-color: #5293ad;
+}
+
+#wrap {
+    min-height: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+
+    background-color: white;
+}
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar button {
+    padding: 0.25em 1em;
+    margin: 0px 0.25em;
+    
+    font-size: large;
+    color: white;
+
+    border: none;
+    background: none;
+}
+
+#navbar button:hover {
+    color: rgb(188, 188, 188);
+}
+
+#main {
+    padding-bottom: 150px;
+}
+
+.section {
+    padding: 2em 3em;
+    margin: 0px 50px;
+    background-color: white;
+
+    border: 5px solid;
+    border-radius: 1em;
+    border-color: rgb(178, 178, 178);
+}
+
+.section#about {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.section .sub-section {
+    width: 100%;
+}
+
+.section#about .sub-section.image .image {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+}
+
+.section#skills #external_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    max-width: 125px;
+}
+
+.section .icon {
+    height: auto;
+    max-width: 50px;
+
+    background: rgb(178, 178, 178);
+    border-radius: 2.5em;
+    padding: 5px;
+}
+
+.section .icon:hover{
+    background-color: rgb(112, 112, 112);
+}
+
+.games {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-evenly;
+}
+
+.gameContainer {
+    border-bottom: 15px solid white;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    padding: 50px;
+    flex-grow: 1;
+    border: 15px solid #5293ad;
+    border-radius: 1em;
+    max-width: 400px;
+    min-height: 872px;
+}
+
+.game a {
+    max-width: 100%;
+}
+
+.game iframe {
+    max-width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+/* To be use for setting size for game thumbnails */
+img.game_thumbnail {
+    height: auto;
+    max-width: 100%;
+}
+
+img#ID_pic {
+    height: auto;
+    max-width: 500px;
+
+    border-radius: 2em;
+}
+
+#footer {
+    height: 150px;
+
+    margin-top: -150px;
+    position: relative;
+    
+    color: white;
+}
+
+#contact_info {
+    padding: 1em;
+}
