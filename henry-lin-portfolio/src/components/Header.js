@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <>
       <header>
-        <h1>Hi there, I'm {USERNAME}.</h1>
+        <h1>Hi, I'm {USERNAME}.</h1>
       </header>
       <br></br>
     </>

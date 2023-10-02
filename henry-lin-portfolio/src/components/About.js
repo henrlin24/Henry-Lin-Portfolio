@@ -1,5 +1,5 @@
 import React from 'react'
-import ProfilePicture from '../resources/images/Profile_Picture.JPG'
+import ProfilePicture from '../resources/images/Profile_Picture2.jpg'
 
 export default function About() {
 
@@ -7,7 +7,6 @@ export default function About() {
     <>
       <div className='section' id='about'>
         <div className="sub-section image">
-          <h2>About me</h2>
           <div className='image'>
             <img
               src={ProfilePicture}
@@ -19,19 +18,19 @@ export default function About() {
         </div>
         <div className="sub-section text">
           <p>
-            <strong>Who am I?</strong>
+            <strong>About me</strong>
             <br />
-            Recent graduate from the University of Michigan - Ann Arbor, with a
+            I'm a recent graduate from the University of Michigan - Ann Arbor, where I got my 
             B.S.E. in computer science. As the go-to "tech-wizz" of my household growing
             up, as well as an avid enjoyer of video games, I am greatly passionate
             about software engineering and learning more about technology. 
             <br />
-            I am a software engineer with experience with both frontend (HTML/CSS,
-            JavaScript, React, Jinja) as well as backend(Flask, SQLite, Rest API).
+            I am a software engineer with experience with both frontend <em>(HTML/CSS, JavaScript, React, Jinja)</em> as well as backend<em>(Flask, SQLite, Rest API).</em>
             <br />
-            I'm also a game developer, where I've worked primarily with Unity as a UI/UX
-            and gameplay programmer, but I also have experience with QA, enemy &amp;
-            level design through solo and smaller team game projects.
+            I'm also a game developer, where have experience with the Unity and Unreal game engines. 
+            I've worked on UI/UX, gameplay, networking, QA, and asset integration.
+            <br />
+            For smaller titles, I've done some design work (gameplay, enemies &amp;level design through smaller games), as well as production and marketing (see the trailer for Cavelit below :D).
             <br />
           </p>
         </div>
