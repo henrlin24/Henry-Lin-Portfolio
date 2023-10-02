@@ -21,6 +21,10 @@ body {
     background-color: #5293ad;
 }
 
+a:link {
+    color: rgb(93, 148, 250);
+}
+
 #wrap {
     min-height: 100%;
 }
