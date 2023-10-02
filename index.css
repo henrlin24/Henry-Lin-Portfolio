@@ -1,6 +1,11 @@
 @font-face {
-    font-family: Visitor;
+    font-family: "Visitor";
     src: url(fonts/visitor1.ttf);
+}
+
+@font-face {
+    font-family: "Alegreya";
+    src: url(fonts/AlegreyaSansSC-Regular.ttf);
 }
 
 html, body {
@@ -11,7 +16,7 @@ html, body {
 body {
     margin: 0;
 
-    font-family: "Mulish" ,"Silkscreen", serif;
+    font-family: "Mulish", serif;
     font-size: larger;
     background-color: #5293ad;
 }
@@ -25,6 +30,13 @@ header {
     justify-content: center;
 
     background-color: white;
+
+    font-size: larger;
+    text-align: center;
+}
+
+header, strong, h2 {
+    font-family: "Alegreya", serif;
 }
 
 #navbar {
@@ -62,23 +74,48 @@ header {
     border-color: rgb(178, 178, 178);
 }
 
-.section#about {
-    display: flex;
-    flex-direction: row;
-    flex-flow: wrap;
-    align-items: center;
-    justify-content: flex-start;
+@media screen and (max-width: 600px) and (orientation: portrait) {
+    .section {
+        padding: 2em 0.5em;
+        margin: 0px 1em;
+    }
+
+    .section .game {
+        border: 10px solid #5293ad;
+        min-height: 300px;
+    }
+
+    .section .game iframe {
+        height: auto;
+    }
 }
 
 .section .sub-section {
     width: 100%;
 }
 
+.section#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.section#about strong {
+    font-size: x-large;
+}
+
+.section#about .sub-section.image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .section#about .sub-section.image .image {
     display: flex;
     flex-direction: row;
 
-    width: 100%;
+    width: auto;
 }
 
 .section#skills #external_links {
