@@ -1,0 +1,177 @@
+{/* entry */}
+          {/* CSE Simulator entry */}
+          <div className='gameContainer'>
+            <div className="game">
+              <div>
+                {/*<img src="" alt="CSE Simulator thumbnail" class="game_thumbnail">*/}
+                <iframe
+                  width={560}
+                  height={315}
+                  src="https://www.youtube.com/embed/ACC4Z46eS-w"
+                  title="YouTube video player"
+                  frameBorder={0}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen=""
+                />
+                <h3>CSE Simulator</h3>
+              </div>
+              
+              <div>
+                <em>
+                  VR simulation of an infamous computer lab on the University of Michigan campus.
+                </em>
+              </div>
+              <br />
+
+              <details>
+                <summary>Learn more!</summary>
+                <div className="description">
+                  <p>
+                    <strong>Technologies: </strong>Unreal, Github, Jira
+                  </p>
+                  <p>
+                    <strong>Description: </strong>
+                    CSE Simulator is a VR project created loosely in the image of the
+                    computer lab located in the Bob and Betty Beyster Building. Built
+                    through the Unreal game engine, it features use of Unreal's blueprint
+                    scripting and use of various external assets to create an unique and
+                    interactive environment. This was my first project in EECS 498 -
+                    Extended Reality and Society.
+                  </p>
+                  <p>
+                    The game was developed using the Unreal Engine. Working with a
+                    partner, we created a virtual environment that loosely recreates the
+                    computer lab located in room 1695 BBB. My personal contributions
+                    include mapping out the room layout and scale, importing and working
+                    to integrate external 3D models and materials, creating the NPCs and
+                    3D dialogue popups, as well as the copy machine. I also worked to
+                    integrate SFX, lighting that worked with the interactive fire alarm
+                    system, and time passage that occured with every interaction.
+                  </p>
+                </div>
+              </details>
+                
+            </div>{" "}  
+          </div>
+          
+          {/* entry */}
+          {/* Gacha Slimes entry */}
+          <div className='gameContainer'>
+            <div className="game">
+              <a
+                href="https://henrlin24.itch.io/gacha-slimes"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <img
+                  src={gachaslime_thumbnail}
+                  alt="Gacha Slimes game thumbnail"
+                  className="game_thumbnail"
+                />
+                <h3>Gacha Slimes</h3>
+              </a>
+                          
+              <div>
+                <em>
+                  2D action platformer, inspired from the Kirby and Megaman games. 
+                  ...and my love of gacha games.
+                </em>
+              </div>
+              <br />
+
+              <details>
+                <summary>Learn more!</summary>
+                <div className="description">
+                <p>
+                  <strong>Technologies: </strong>C#, Unity, Github, Jira
+                </p>
+                <p>
+                  <strong>Description: </strong>
+                  Gacha Slimes is a 2D platformer, and is the second project I made for
+                  EECS 494. The game was created individually by me, but does make use
+                  of free visual and audio assets. The core idea behind the game behind
+                  the game is to create a platformer that has a core "gacha" mechanic
+                  that would change the way that players progress through the levels.
+                </p>
+                <p>
+                  The game was developed using the Unity Engine. Specific contributions
+                  from me include creating movement and attack scripts, prefabs for the
+                  slime enemies and interactable objects in the levels, as well as scene
+                  management scripts. The UI was also a major part of development, where
+                  I implemented UI elements linked to the game objects by making use of
+                  an Eventbus scheme. The "gacha" sequence involved making use of
+                  coroutines to play out the "animations" and pausing the game in the
+                  background when the gacha interface was active. Core mechanics and
+                  game level design, as well as the corresponding playtest and feedback,
+                  were also major parts of my development process. Changes were kept
+                  track of using a Github repository, as well as Jira to keep track of
+                  tasks.
+                </p>
+                </div>
+              </details>
+              
+            </div>{" "}  
+          </div>
+          
+          {/* entry */}
+          {/* Custom LOZ entry*/}
+          <div className='gameContainer'>
+            <div className="game">
+              <a
+                href="https://henrlin24.itch.io/legend-of-zelda-dont-move"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <img
+                  src={loz_thumbnail}
+                  alt="Legend of Zelda Custom game thumbnail"
+                  className="game_thumbnail"
+                />
+                <h3>NES Legend of Zelda remake</h3>
+              </a>
+                                      
+              <div>
+                <em>
+                  Remake of a level from the nostalgic NES title Legend of Zelda, 
+                  with a custom mechanics and level.
+                </em>
+              </div>
+              <br />
+
+              <details>
+                <summary>Learn more!</summary>
+                <div className="description">
+                <p>
+                  <strong>Technologies: </strong>C#, Unity, Plastic SCM, Jira
+                </p>
+                <p>
+                  <strong>Description: </strong>
+                  This is a Legend of Zelda clone, created with a partner as the first
+                  project in EECS 494. This involved remaking the first dungeon of the
+                  original NES game, including the enemies, traps, and weapons
+                  availiable at that point in the game. Additionally, we also
+                  implemented our own custom mechanic and level — a moving laser
+                  obstacle that only damages the player when they are moving, inspired
+                  by a similar mechanic featured in Undertale.
+                </p>
+                <p>
+                  My specific contributions to this project include the implementation
+                  of the Keese (the bat enemies), which involved a randomized non-grid
+                  based movement different from the other enemies, as well as Aquamentus
+                  (the boss) and the Wallmaster enemies (the hands that grab the player,
+                  sending them to the beginning of the dungeon). I implemented many of
+                  the environmental aspects of the game. Water tiles, pushable blocks,
+                  locked doors &amp; keys, pickups, and room transition sequences are
+                  among this list. Other core gameplay elements I worked include player
+                  health and UI, the implementation of god mode (cheat mode, allows for
+                  easier time testing), as well as contributing towards the custom
+                  mechanic and level design. I notably implemented the starting tutorial
+                  sequence of the custom level.
+                </p>
+                </div>
+              </details>
+              
+            </div>{" "}  
+          </div>
+          
+          {/* entry */}
