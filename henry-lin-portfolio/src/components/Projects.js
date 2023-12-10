@@ -1,4 +1,5 @@
 import React from 'react'
+import tailsofwar_thumbnail from '../resources/images/thumbnails/TailsOfWar.png'
 import corsair_thumbnail from '../resources/images/thumbnails/CurseOfTheCorsair.png'
 import cavelit_thumbnail from '../resources/images/thumbnails/CavelitGif.gif'
 import orbitvr_thumbnail from '../resources/images/thumbnails/OrbitVRGif.gif'
@@ -16,6 +17,82 @@ export default function Projects() {
           Click the project thumbnails or titles to play! Note: non-VR titles only.
         </p>
         <div className="games">
+          {/* Tails of War entry */}
+          <div className='gameContainer'>
+            <div className="game">
+            <a
+              href="https://wolverinesoft-studio.itch.io/tails-of-war"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                src={tailsofwar_thumbnail}
+                alt="Tails of War game thumbnail"
+                className="game_thumbnail"
+              />
+              
+              <h3>Tails of War</h3>
+            </a>
+
+            <div>
+              <em>
+                3D turn-based strategy game, supporting both single-player and multiplayer play. 
+                <br />
+                Made as part of WolverineSoft Studio.
+              </em>
+            </div>
+            <br />
+
+            <details>
+              <summary>
+                Learn more!
+              </summary>
+                <div className="description">
+                <p>
+                  <strong>Technologies: </strong>C#, Unity, Photon, SourceTree, Jira,
+                  Confluence, Bitbucket
+                </p>
+                <p>
+                  <strong>Description: </strong>
+                  Tails of War is a 3D turn-based strategy game, inspired by the likes of Wargroove, Advanced Wars, and Fire Emblem. 
+                  Players are able to battle it out with unique champions, different unit types with different strengths and weaknesses, and make use of special landmarks and pickups to gain an edge. 
+                  Can you lead your army of felines to victory?
+                </p>
+                <p>
+                  This game was developed over two developement cycles. both of which I contributed to. 
+                  <br />
+                  <br />
+                  The first took place over the summer (May - August 2023), and focused on developing a core multiplayer framework using the Photon Engine for Unity. 
+                  I implemented the core gameplay system that would initialize the game (from setting up the initial player states to deciding which player went first), 
+                  as well as handling turn progression and handoff between players. 
+                  This system was built in with the incorporation of subsequent gameplay features mind, which could interact with the different stages of turn progression. 
+                  I implemented several early features that worked with the turn-based system in this manner, including the city capture mechanic implementation, which relied on counters that incremented every turn, as well as setup for possible win conditions. 
+                  Another aspect of my contributions in this first half of development included handling the networking aspects of the game. 
+                  This included syncing of player and unit data across clients, as well as handling disconnection and reconnection behavior for players.
+                  <br />
+                  <br />
+                  The second and last half of developement took place over the fall (September - December 2023) and focused on improving the gameplay and aesthetics of the game. 
+                  My contributions include assisting with incorporating terrain types, implementing extra buffs through "Artifacts of Power" that could empower a unit further on pickup, 
+                  and notably proposing and building a custom map editor tool. The tool came about due to my interest in creating custom developer tool and trying out Unity's UI Toolkit system, 
+                  and observing a lack of a easy way to create and modify custom maps for the game. After various prototypes and iterations guided by feedback from interested designers and fellow developers, 
+                  my tool has since been incorporated to support over 8 different tile types and used to create 5+ custom game maps.
+                  <br />
+                  <br />
+                  Check out the{" "}
+                  <a
+                    href="https://wolverinesoft-studio.itch.io/tails-of-war"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    itch.io page here.
+                  </a>
+                  <br />
+                </p>
+                </div>
+            </details>
+            </div>{" "}
+          </div>
+
           {/* Curse of the Corsair entry */}
           <div className='gameContainer'>
             <div className="game">
