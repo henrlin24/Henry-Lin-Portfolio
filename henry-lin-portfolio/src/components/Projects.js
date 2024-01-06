@@ -54,18 +54,18 @@ export default function Projects() {
                 </p>
                 <p>
                   <strong>Description: </strong>
-                  Tails of War is a 3D turn-based strategy game, inspired by the likes of Wargroove, Advanced Wars, and Fire Emblem. 
+                  Tails of War is a 3D turn-based strategy game inspired by the likes of Wargroove, Advanced Wars, and Fire Emblem. 
                   Players are able to battle it out with unique champions, different unit types with different strengths and weaknesses, and make use of special landmarks and pickups to gain an edge. 
                   Can you lead your army of felines to victory?
                 </p>
                 <p>
-                  This game was developed over two developement cycles. both of which I contributed to. 
+                  This game was developed over two development cycles. both of which I contributed to. 
                   <br />
                   <br />
                   The first took place over the summer (May - August 2023), and focused on developing a core multiplayer framework using the Photon Engine for Unity. 
                   I implemented the core gameplay system that would initialize the game (from setting up the initial player states to deciding which player went first), 
                   as well as handling turn progression and handoff between players. 
-                  This system was built in with the incorporation of subsequent gameplay features mind, which could interact with the different stages of turn progression. 
+                  This system was built in with the incorporation of subsequent gameplay features in mind, which could interact with the different stages of turn progression. 
                   I implemented several early features that worked with the turn-based system in this manner, including the city capture mechanic implementation, which relied on counters that incremented every turn, as well as setup for possible win conditions. 
                   Another aspect of my contributions in this first half of development included handling the networking aspects of the game. 
                   This included syncing of player and unit data across clients, as well as handling disconnection and reconnection behavior for players.
@@ -73,9 +73,9 @@ export default function Projects() {
                   <br />
                   The second and last half of developement took place over the fall (September - December 2023) and focused on improving the gameplay and aesthetics of the game. 
                   My contributions include assisting with incorporating terrain types, implementing extra buffs through "Artifacts of Power" that could empower a unit further on pickup, 
-                  and notably proposing and building a custom map editor tool. The tool came about due to my interest in creating custom developer tool and trying out Unity's UI Toolkit system, 
-                  and observing a lack of a easy way to create and modify custom maps for the game. After various prototypes and iterations guided by feedback from interested designers and fellow developers, 
-                  my tool has since been incorporated to support over 8 different tile types and used to create 5+ custom game maps.
+                  and notably proposing and building a custom map editor tool. The tool came about due to my interest in creating custom developer tools and trying out Unity's UI Toolkit system, 
+                  and observing a lack of an easy way to create and modify custom maps for the game. After various prototypes and iterations guided by feedback from interested designers and fellow developers, 
+                  my tool has since been incorporated to support over 8 different tile types and create 5+ custom game maps.
                   <br />
                   <br />
                   Check out the{" "}
@@ -139,24 +139,23 @@ export default function Projects() {
                 <p>
                   <strong>Description: </strong>
                   Curse of the Corsair is a rethemed case study of the hit game Hyper
-                  Light Drifter, a 2.5D hack and slash game. Play as a pirate under a
+                  Light Drifter, a 2.5D action-adventure game. Play as a pirate under a
                   myserious curse, venturing to the seek the cure and change his fate.
                 </p>
                 <p>
                   The game was developed using the Unity Engine and using Bitbucket for
-                  version control. The team also share documentation and assets using
+                  version control. The team also shared documentation and assets using
                   Confluence, and kept track of tasks and bugs using Jira. Development
-                  was conducted within Agile-style sprints, which primairly consisted of
+                  was conducted within Agile-style sprints, which primarily consisted of
                   two weeks of feature implementation followed by a QA week. I
                   contributed as part of the programming department, as well as part of
                   the UI/UX feature team. I was responsible for elements of the main
                   HUD, such as player health, ammo, and stamina displays, as well as
-                  weapon and inventory UI. I also worked to implement currency pickup
+                  weapon and inventory UI. I also worked to implement currency
                   popups, as well as the interaction UI. Additionally, I assisted in QA
-                  and art integration, not limited to bugfixing, adding hud shake and
+                  and art integration, not limited to bugfixing, adding hud shake & 
                   visual effects to indicate player damage, as well as working with the
-                  art deparment to get player shooting and projectile animations
-                  integrated.
+                  art team to get player shooting and projectile animations integrated.
                   <br />
                   <br />
                   Check out the{" "}
@@ -229,9 +228,10 @@ export default function Projects() {
                   </p>
                   <p>
                     <strong>Description: </strong>
-                    Cavelit is a 2D platformer game, developed by a 5 person team for EECS
+                    Cavelit is a 2D platformer game, developed by a team of 5 for EECS
                     494. It also includes freelance contributions for music, SFX, and
-                    voicing. You play as Bob, a miner who has be caught in a cave-in, and
+                    voicing. You play as Bob, a miner who has been caught in a cave-in. 
+                    With limited resources and treacherous terrain, you 
                     need to find a way out of the depths.
                   </p>
                   <p>
@@ -314,10 +314,10 @@ export default function Projects() {
                   The game was developed using the Unreal Engine with assets found
                   primarily on Sketchfab as well as assets from official NASA
                   repositories for the ISS. The project was inspired by existing
-                  experiences such as VR Home, as well a shared interest in space with
-                  group members. My personal contributions greyboxing and contributing
-                  to the planning of activites interior ISS scene, as well as obtaining
-                  intial models for the exterior ISS and Earth. I also worked to
+                  experiences such as VR Home, as well as the team's shared interest in space. 
+                  My personal contributions include greyboxing and assisting with the 
+                  planning of activites interior ISS scene, as well as obtaining
+                  models for the ISS environment and Earth. I also worked to
                   specifically implement the food hydration station, as well as getting
                   hand assets and animations integrated. Outside of the engine, I took
                   charge of devblog posts and worked on the product website:{" "}

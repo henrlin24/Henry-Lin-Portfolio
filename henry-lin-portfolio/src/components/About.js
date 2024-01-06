@@ -27,7 +27,7 @@ export default function About() {
             <br />
             I am a software engineer with experience with both frontend <em>(HTML/CSS, JavaScript, React, Jinja)</em> as well as backend<em>(Flask, SQLite, Rest API).</em>
             <br />
-            I'm also a game developer, where have experience with the Unity and Unreal game engines. 
+            I'm also a game developer, where I have experience with the Unity and Unreal. 
             I've worked on UI/UX, gameplay, networking, QA, and asset integration.
             <br />
             For smaller titles, I've done some design work (gameplay, enemies &amp;level design through smaller games), as well as production and marketing (see the trailer for Cavelit below :D).
@@ -46,9 +46,9 @@ export default function About() {
         <div className="sub-section text">
           <strong>My interests</strong>
             <br />
-            I enjoy playing video games in my free-time, from long-time favorites such
-            as Pokemon and Megaman to more recent interest such as the Fire Emblem
-            series and Apex Legends.
+            I enjoy playing video games in my free time, from long-time favorites such
+            as Pokemon and Megaman, to more recent interests such as the Fire Emblem
+            series and Genshin Impact.
             <br />
             On that same note, I also enjoy developing games, where a notable
             experience includes my role as a programmer on the student-run
@@ -56,10 +56,10 @@ export default function About() {
             titles such as Cavelit and Gacha Slimes. It's definitely empowering to be
             able to learn and work towards making games that feel good and emulate my
             own fun experiences playing video games, where I find particular enjoyment
-            in being able to look at exisitng games through the lens of a game
+            in being able to look at existing games through the lens of a game
             developer. Questions like "how did they make this jump feel so good?" and
             "how did they implement this pathfinding system that considers height and
-            non-linear paths?" now pop-up and, in my opinion, further enrich my
+            non-linear paths?" now pop up and, in my opinion, further enriches my
             enjoyment of video games as a medium.
             <br />
             Front-end development development scratches a similar itch for me, where I
